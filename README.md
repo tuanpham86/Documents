@@ -1,2 +1,2 @@
 # Documents
-Documents
+All Documents
