@@ -1,0 +1,127 @@
+Improvement approach:
+The pace of development requires a new approach to ensuring quality in each build.
+
+- Pending Item:
+	- Domain knowledge awareness
+
+	- Test case template*
+		- Need new template
+		- Need to be more universal?
+		
+	- Practical working habit
+	
+	- View points: Checks if it is appropriate and complete.
+
+	- Duty scope:
+		- Bug advocating
+		- Bug investigating
+			- Splitting backlog item to several cases?
+		- Bug report
+			- Contain stack traces or are easy to read
+			- 
+	- Bug fixing is faster when:
+		- Involve less people
+		- Higher priority of bug
+		- Bug fixing coordination patterns (communication between devs)
+	
+	- QA = QualityAssistance.Task:
+		Testing tool
+		Automation frame
+		Knowledge sharing system
+		Defect analysis tool
+	
+	- To improve:
+		Questioning the assumption
+		Culture
+		Skill
+		Mindset
+	
+	Report (KPI): Development / QA
+	• Velocity (per team member) – Agile Methodology (to be implemented when Spencer is on board)
+	• Backlog (enhancements)
+	• Backlog (defects) – customer vs QA (by release)
+	• Overtime (hours greater than 40 per person per week)
+	
+	• Average Testing Efficiency: Bugs per man months of testing effort (Average) - should be less than 50
+		- (Total bugs during testing / testing effort in man months)
+	• Average Customer Defect Density: Bugs reported by client after delivery Vs total testing efforts in man months.
+		- (Total bugs after delivery / testing effort in man months)
+	• Functional Test Failures: Number of failed functional test cases / Total number of executed functional test cases (monthly)
+	• Bugs with Severity (Level 1/2/3)
+	
+	- Regression:
+		- MPV as a guide
+		- Exploratory is needed
+		- Time must be plenty
+		- Automation to fill up
+		
+- Build a Framework
+	- What is a framework
+	- What can this framework do?
+	
+	Points
+		- Visibility
+			• Readability
+			• Typo mistake
+			• Overlap, spill out
+			• 
+		- Functionality
+			• Work as requirement?
+			
+		- Operational View restrict
+			• Match with other sample?
+
+			
+		New setting?
+			> Operational View restrict?
+
+		New action?
+			> User profile
+			
+		Estimation?
+			- Scope of changes
+			- # of entities
+			- # of requirement
+			- Familiarity
+			
+Automation (reply mail):
+		
+		Automation is lagging behind comparing to the progress of development team. 
+		
+		This is due to the fact that we have to wait for the code and the UI become stable before start developing UI automation script.
+		Also, the current End to End solution goes through the application's bare-bones, navigate but doesn't provide all of the functionality yet.
+		
+		With that in mind the following are in scope of changes for Automation:
+		- Add more scenarios to the backlog for Automation team, while the manual test script is being generated
+		- Keep providing missing functionality, those scenarios with higher priority will be taken out first
+		
+		That will take awhile before we see any breakthrough or improvement on the overall quality but I believe we can achieve a better coverage of all missing functionality.
+		
+	To do:
+		- Tracking & Report template
+		- KPI:
+			- Result: Useful vs Irrelevant
+			- Coverage: Automation Test Case vs Manual Test Case
+	
+	https://www.telerik.com/login
+	User : tomt@mainpac.com.au
+	Pass: M@inp@c
+				
+Skill Matrix
+
+	Test Case Writing	Willingness to Support	Automation(scripting skill)	Performance test (tools) (Jmeter-SoapUI)	
+	
+	
+	1) The work that you are working (clear and logical structure)
+		- Testing
+			- Mainpac EAM
+		- Consulting
+			- EAM domain business
+		- Communicating
+			- Several common mistakes
+	2) Try to make it short so that you can present in 10'
+	
+	
+	
+
+		

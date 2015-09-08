@@ -1,0 +1,1194 @@
+Case is verified as Passed on 11.3.15.2 - SVN#12359.
+Please get more details from attached test case file [^Mainpac Test case for MPV-5871.xlsx].
+
+
+13/07: 0.5 + 1 + 1.5 + 2 + 1 + 2 = 8
+
+	Daily: 0.5
+
+	Test case: 
+		- MPV-5534
+		- MPV-5659
+		- MPV-5675
+
+	Duplicate Date column: 1h
+
+	Extra Security: New licence always has Extra security enabled?? TBI
+	
+	MPV-5832: 1.5h
+	
+	MPV-5828: 2h
+	
+	DRD-5757: 1h
+		- Assumption for Automation is S along with manual
+		- Scenarios:
+			- Check new page action on Work Order screens
+			- Check new batch action on Work order screens
+			- Verify Email dialog box layout elements are available
+			- Check profile items are added: Add/Delete permission
+			- Check Template email lookup function
+			- Check SEing email function
+			
+	Issue: Add Delete button on Parts grid in Parts Catalogue screen? TBI.
+	
+	R3.15.2 Estimation: 2h
+	
+14/07: 0.5 + 3 + 0.5 + 0.5 + 3.5 = 8
+
+	Daily: 0.5h
+	
+	DRD-5738: 3h
+		- Issue in displaying time format:
+		Created Date column:
+			14 Jul 2015 1:58:17 PM => 14 Jul 2015 6:58:17 AM	: 1:58:17 PM => 6:58:17 AM		: -7
+			10 Jul 2015 6:07:11 PM => 10 Jul 2015 11:07:11 AM	: 6:07:11 PM => 11:07:11 AM		: -7
+
+		- Display correctly as per set setting
+			- 
+		- Display correctly after exported
+			- Excel
+			- PDF
+			- 
+	
+	Estimation R3.15.2: 3.5
+		- MPV-5554: 2.5h (0.5)
+			- Order screen action:
+				- Submit
+				- Release
+				- Complete
+			- Buyer Work List action:
+				- Submit
+				- Release
+				- Complete
+	
+	MPV-5813: Stock Part creates Purchase Requisition Line (WorkOrderParts). 0.5h
+		- http://jira.mainpac.com.au:8080/browse/DRD-1955
+		- http://jira.mainpac.com.au:8080/browse/MPV-3380
+
+	Issue: Can create Condition record with blank Date (input 24:00 into Time field). TBA.
+	
+	
+15/07: 0.5 + 2 + 1 + 1 + 1 + 2 + 0.5 = 8
+
+	Daily: 0.5h
+	
+	MPV-5813: 2h
+		- Check old behavior: R3.12:
+			- Purchase if default warehouse is MPSA
+			- Stores if default warehouse is Test1, Test2
+		- Reference:
+			- http://jira.mainpac.com.au:8080/browse/MPV-5235
+			- 
+		
+	DRD-5765: 1h
+	
+	Support: 1h
+	
+	Test case template: 1h
+		- Check old template from FCS
+		- Merged some elements to Mainpac test case template file
+		
+	Estimation R3.15.2: 2h
+		- MPV-5821: 4h
+			- Cannot delete Operational Asset: 1h
+				- Check profile items
+				- Create additional reference
+				- Ensure referenced Asset cannot be deleted
+			- Object reference not set to an instance of an object when edit Operational Asset status history: testing time est: 0.5h
+			- Operational Asset status history is updated wrongly to last Operational Asset: 0.5h
+	
+	MPV-5842: 1h
+		- 
+		
+	MPV-5856: 0.5h (2 + 1 + 2 + 1 = 6)
+		- Deploy: 2h
+		- Working with requisition line: 1h
+			- Adding requisition line to PM776, PU086
+			- Can Add requisition line: Add page is loaded in fashionable time
+			- Can Edit requisition line: Edit page is loaded in fashionable time
+			- Can Delete requisition line: action is completed in fashionable time
+		- Defaulting operational view on adding records: 2h 
+		- Addition exploration: 1h
+		
+16/07: 0.5 + 0.5 + 0.5 + 0.5 + 0.5 + 5 = 7.5
+
+	Daily: 0.5h
+	
+	List: 0.5h (consolidate)
+		1. MPV-5856: 
+		2. DRD-5775, DRD-5777: Ngan, Bao
+		3. DRD-5774, MPV-5849: Ngan 
+		4. MPV-5833: 
+		5. MPV-5882: 
+		6. MPV-5851: Bao
+		7. MPV-????: 
+	
+	
+	DRD-5756: PDF - Document (0.5h)
+		- install package 3.15 14Jul with Reports: Done
+		- check release PO, issue WO: Done
+		=> mistake in implement where custom report should be used by Hopira instead of standard report
+		
+	DRD-5765: 0.5
+		- restore Hospira database
+		- check scheduled task
+		- try to replicate XML error
+	
+	DRD-5771: 0.5
+		- Create Requisition from Parts Catalogue: wrong price default?
+		
+	DRD-5774: Requisition Line - Supplier lookup appears to be looking at the user's base op view instead of the requisition's op view (0.5h)
+		- User on Test1:
+			- Edit Parts on MPSA
+			- Create > Requisition
+			=> Requisition Line is created on Test1
+		- User on MPSA:
+			- Edit Parts on Test1
+			- Create > Requisition
+			=> Requisition Line is created on MPSA
+	
+		- User on PM776: Supplier lookup show 10485 items
+		- User on MHL: Supplier lookup show 1 items (MHL)
+		
+	
+	MPV-5856: 5h
+		- Deploy: done (S 11:00 AM)
+		- Write TCs: on-going
+		- Checked: Requisition > Line, Order > Line, Invoice > Line, Work Order (E 19:20PM)
+	
+17/07:
+
+	Daily: 0.5
+	
+	Package R3151: 1h
+	
+	MPV-5866: 2.5h
+	
+	MPV-5871: 3h
+	
+	MPV-5872: 1h
+	
+	Packge R315: 1h
+	
+20/07: 0.5 + 2 + 2 + 0.75 + 1.5 + 1 + 2 = 9.75h
+
+	Daily: 0.5h
+	
+	MPV-5853: 2h
+		- Requisition with no Part: Default Buyer Group
+			- Reproduce with 12259:
+			- Recheck with fix on 12289: 
+		- How about:
+			- Purchase with part: 
+			- Replenishment: 
+			- Stores: 
+	
+	MPV-5873: 2h (2h30 PM)
+	
+	MPV-5850: 45m
+	
+	MPV-5864: 1.5h
+	
+	MPV-5852: 1h
+		- S 17:00
+	
+	Package: 2h
+	
+21/07: 0.5 + 2 + 1.5 + 1 + 2 0.5 = 7.5h
+
+	Daily: 0.5h
+	
+	Review merge cases: 2h
+	
+	Log work: 1h
+	
+	Support - Investigate using UNC link document within EAM: 1.5h
+	
+	Estimation: 2h
+		- MPV-5669: requires further investigation
+		- MPV-5586:
+		- MPV-5710:
+		- MPV-5826: 
+		- MPV-5868:
+		
+	Investigate defaulting pricing details when adding requisition from Part: 0.5h
+	
+22/07: 0.5 + 2 + 2 + 3 = 7.5
+
+	Daily: 0.5h
+	
+	Hospira: 2h
+		- Prepare migration checklist, MMA cases
+	
+	MPV-5765 (estimate 2h): 2h
+		- Updates WorkOrderStepList: This trigger sets the step description to the work order's description, for the 'Default' step.
+		- When creating the 'default' step for a work order?
+			- Create Work Order from Forecast: 
+			- Create Work Order by Ad-hoc: Default to 'Default'
+			- Create Work Order by template: Default to Original Work Order
+			- Create Work Order by Create Similar Work Order: Default to Original Work Order
+			
+	Hospira Migration plan: 3h
+		- Thursday evening/Friday morning
+		- the Paradox v6.9 db to be available on the FTP server around 9pm on 9th July (6pm Vietnam time).
+		- MMA-272 to be the central point for information gathering
+		- Hung Mai will S first Task by download source database and run migration tool when the source Paradox 6.9 is ready on July 23th 6:00 PM Vietnam Time.
+		- Other tasks will be done on July 24th and the migrated database will be provided 
+					at the COB of July 24th Vietnam Time.
+					
+		- Allowed 19 hours (increased contingency) for the TMA tasks based upon experiences with the previous Fluor migration
+			- Try and finish the migration and subsequent upload back to the ftp server by early afternoon Friday. This will help maximise the window Dicky has to finalise client site configuration on Friday afternoon and Saturday.
+			- The client is due to conduct QA on Sunday.
+			- TMA to complete the tasks to deliver the migrated db on the FTP server by 10am on the 10th (Vietnam time)
+				- Migrated database will be ready on FTP from 10 AM to 12 AM.
+			- Assumption that the database size of final migration is the same with the database size of trial migration.
+		
+23/07: 0.5 + 2 + 0.5 + 0.5 + 1.5 + 1 + 2.5 = 8.5
+
+	Daily: 0.5h
+	
+	MPV-5885: (6h for Original case) 2h
+		- reading stuffs: 0.5h
+		- working with email templates 0.5
+		- writing test case: 0.5 + 0.5
+		- Is there a need for an Attachment box?
+		
+	MPV-5883: 0.5h
+	
+	MPV-5880: 0.5h
+		
+	Tracking and KPI for tester?
+
+	Issue: 
+		- Invoice line total price is cleared after a validation message occurs. TBR.
+		
+	Reading: writing test cases (S 14:30 - E 16:00) 1.5h
+		- Document for those matured company should have review-version section on the top (in the first place)
+	
+	Support: 1h
+	
+	Migration: S 6 PM - E 8:30 PM
+		
+		
+24/07: 0.5 + 2 + 3 = 5.5 + 2
+
+	Daily: 0.5
+
+	Migrate: v3.6.5 ==> v3.14: 2h
+		
+		Issue: Find missing Issue Requisition records for the migrated database. 1.5h
+			- When will a 'Issue' transaction created?
+				- Add-hoc Issue = Stores Requisition
+				- Work Order Part: Stores Requisition
+					=> Find these Stores Requisitions.
+					
+				- Requisition Line
+				- Inventory Transaction
+				- Transaction
+				- Cost Distribution
+	
+			- Process Transaction:
+				- Update budgets
+				- Update Transaction records
+			
+			- Cost total in the year:  
+				Operational Assets: Cost = ?
+					- Work Orders: Cost = ?
+						- Cost (Transaction): 
+							- Issue:		related information available?
+							- Receipt:		related information available?
+							- Labour:		related information available?
+
+	MPV-5885: 3.5h
+		- Writing test case: 2.5h
+		- Running TCs: 1h
+		
+	MPV-5699:
+	
+	Defaulting Account code on MPV-5246. TBI.
+		
+		
+27/07: 0.5 + 6 + 1 = 7.5
+	
+	Daily: 0.5h
+	
+	MPV-5885: (S 10h -> 16:00 -> 17:30): 2 + 2.5 + 1.5 = 4.5 + 1.5 = 6
+		- Business rule to reject Insert if Event != 'SE Email': How to test this?
+			- Mainpac Connect: Not supported
+			- Import: 
+			- Should there be 2 Email Template added when installing with blank database.
+			- Cannot sE email: Wrong code line.
+				
+	Support: 1h
+		
+28/07:
+	
+	Daily: 0.5h
+	
+	Estimation: 
+		- MPV-4294: Thumbnail photos not showing in lookups: 5h
+			- Task
+			- Transaction
+			- Labour Resource
+		- MPV-4685: Warehouse lookup on Stocktake work list will only show currently selected record: 3h
+		- MPV-5559: Drop and re-create Mainpac Profile on upgrade: 2h
+		- MPV-5231: The Receipts grid appeared two records which have the same OrderLine
+			- MPIV-207: Make docket number mandatory, and unique per OrderLineID
+		- MPV-4319: Parts error: Can't issue Parts: 2h
+		
+	MPV-5885:
+		- Scenario 1: SE Email from Work Order Request Screen
+			- SEs an email to the address nominated on the request.
+			
+	TBI: EAM's Supporting IE 8 and IE 9 (old versions)		
+		- index.htm#10423_1.htm
+		
+29/07:
+
+	Daily: 0.5h
+	
+	MPV-5885: 6h
+		- Cannot create user while being in the Labour Resource screen. Logon user's profile = MainpacProfileCopy. (-)
+		
+	MPV-5558: Requires inspection
+	
+	MPV-5874: Bin lookup fitler for Bin up from current Operational View. Commented.
+			
+	Support: 1h
+	
+	MPV-5892: 1h	
+			
+	Cannot reproduce:
+		- MPV-4273, MPV-4910, MPV-5045, MPV-4503, MPV-5278, MPV-5605, MPV-5610
+		- MPV-4911, MPV-4368, MPV-4319, MPV-4307
+	Not a Problem:
+		- MPV-5875
+		- MPV-5874, MPV-4277, MPV-4688, MPV-4963: Need Confirmation
+
+		
+30/07: 0.5 + 2 + 2 + 3 = 7.5
+
+	Daily: 0.5h
+	
+	MPV-4277:
+		- Check MPV-5246: always enable account lookup on cost distribution grid on order line screen.
+		- Account Segement:
+			- Validation on:
+				- Part has balance account: No validation - Defaults Account Code
+					- Part doesn't has account (or Non-stock part): Validation occur - Get user input
+			- Validation off:
+				- Part has balance account: No validation - Defaults Account Code
+					- Part doesn't has account (or Non-stock part): Validation occur - Get user input
+					
+		Research JIRA issue on Account Code: 2h
+			
+		
+	Issues: 2h
+		- Invoice Line: Negative unit price is invalid message. TBI.
+		- Invoice Line grid in Invoice: 'Total Price (tax inc)' show value while line's total = 0 and Unit Price is negative. TBI.
+		- Cost Distribution grid keep old Account Code value even when user specified a different value. Issue occurs when 'Account Segment: Display in Order Line' setting is enabled.
+		- Cost Reference - Account Segment don't appear in Replenishment Requisition screen.
+		- DRD-5706: Account Code is still disabled when type is "Purchase"
+			- Code Distribution fields should not be changed through screen manager. TBI.
+			- DRD-5627 seems contrary to above statement
+		- MPV-5259: Order Line: System doesn't show validation for 'Account Code' while the field is shown as mandatory.
+		- Account Code is not retained when converting Requisition to Order.
+
+	
+	MPV-4652: External WO requests: 
+		- Investigate: 3h
+			- Check User Guide of External WO requests module
+			- WORAnonymous user on Electrolux database is Enabled
+			- Work Request Security Mode = Open
+			
+			
+31/07: 0.5 + 1.5 + 1.5 + 0.5 + 0.5 + 0.5 + 0.5 + 0.5 = 6
+	
+	Daily: 0.5h
+	
+	MPV-4652: External WO requests (1.5h)
+		- WORAnonymous user on Electrolux database is Enabled
+		- Work Request Security Mode = Open
+		- Licence = Prevent Duplicate Logins option enabled
+		- Check Licence Creator User Guide for details of the 'Duplicate Login' attribute
+		- WOR Concurrent Users is set to 1 (Licence)
+		- WOR Named Users is set to 1 (Licence)
+		- Tried login WORAnonymous on 1 computer and accessing and adding WOR from the external module from another computer
+	
+	MPV-4812: (S 11:00 - E 14:00) 1.5h - Need Confirmation
+		- Review old cases on R2, recheck possibility for a Merge
+		- MPV-4296 - R2.18 (DRD-4488): Add option to 'Add from Suppliers' to 'Work Order Parts'
+		- MPV-4298 - R2.18 (DRD-4403): Add Suppplier Item lookup to Requisition Line screen
+		
+		- Current Supplier lookup on R3.15.2:
+			- Is this duplicated with existed MPV- / 'Restrict Supplier Lookup' setting on R3.15.2?
+		- Added comment to Lisa
+		
+	Work Order's Scheduling tab: 0.5h
+		- Required number meaning?
+		
+	DRD-5800 (MPV-2753 - Ability to take Mainpac "offline"): 0.5h
+	
+	MPV-5705: 0.5h Write TCs
+	
+	DRD-5797: Error clicking on hyper links 0.5h
+	
+	MPV-5602: Processing dialogues - disable Close and x button. (S 3h15 - x) 0.5h
+		- Revise test cases of MPV-5527
+	
+	DRD-5797: 0.5h
+		- 
+		
+	Support: 1h
+	
+	
+	
+03/08: 0.5 + 1 + 1.5 + 0.5 + 0.5 + 1 = 5 + ?3
+
+	Daily: 0.5h
+	
+	MPV-5709: 1h
+		- Write test cases - replicate (S 11h) Uploaded
+		
+	MPV-4814: 1.5h
+		- Enable/Hiding "actions" on the Work Order Parts Grid (Operational Settings > Work Orders > Rules & Defaults) TBI.
+		- Write test case (S 13:40) E 15:40
+			- Current support actions:
+		- 6th action on R3.15
+	
+	Sprint1 brief introduction: 0.5h
+	
+	MPV-5604: 0.5h
+		- S 16:10
+		- 
+		
+	DRD-5797: 1h (logged on JIRA)
+		
+		
+04/08: 0.5 + 0.75 + ?5.5 = 6.5
+
+	Daily: 0.5h
+	
+	MPV-5604: 45'
+	
+	MPV-5602: Not S yet
+		- Revise test case from 5527
+	
+	Timesheet: S 13:30 - E (5h)
+		- Tuan
+			- May: 5070/9000 = 56%
+			- June: 3435/9000 = 38% => to populate to at least 50%
+			- July: 4905/9000 = 55% => Missing 45%
+		- Hien
+			- May: 4260/9000 = 47% => populate
+			- June: 6510/9000 = 72% (Low priority)
+			- July: 3630/9000 = 40% => Missing 58%
+		- Thu
+			- May: 7410/9000 = 82% (Standby)
+			- June: 6570/9000 = 73% (Standby)
+			- July: 3060/9000 = 34% => Missing 66%
+	
+05/08: 0.5 + 3 + 2.5 + 0.5 + 1 = 7.5
+
+	Daily: 0.5h
+	
+	MPV-5705: 3h
+		- S (10:00 - 12:00) 3h (-1)
+	
+	MPV-5829: S (15:00 - 18:00) 2.5h
+		- Write Test case
+		- Execute
+		- Work Order Steps: feedback are automatically available
+		
+	Working on 04/08 tasks:
+		- MPV-5602: Revise test cases (S 13:30 - expect E 14:30) 1h
+
+	Issue:
+		- Cannot update Round Work Order steps while user does not have permission on Work Order. TBA.
+		- SEing email is affected by the work on MPV-5885. TBI. (Spent 0.5h)
+		
+	PEing item: 1h
+		- Investigate OLD JIRA case
+		
+06/08: 0.5 + 1 + 1 + 1 + 1 + 1 + 2 = 6 + ?1
+
+	Daily: 0.5h
+	
+	Continue checking email sEing issue: 1h
+		- Requisition on R3.14
+		- Adding JIRA case: MPV-5900
+	
+	MPV-4814: S 10:30 - E 11:30: 1h
+		- 
+	
+	MPV-5829: 1h
+		- Update test cases: 0.5h
+		- Execute: 0.5h
+		
+	Issue:
+		MPV-5885: Editing Email Template records - the Entity field is disabled
+	
+	MPV-5900: 1h
+		- Write test cases: 1h
+		
+	Update tracking worksheet: 1h
+	
+	Research Git flow: 2h
+
+07/08: 0.5 + 5.5 + 1 + 1 + 1 + 0.5 = 9.5
+
+	Daily: 0.5h
+	
+	MPV-5900: 2.5 + 0.5 + 1.5 + 1 = 5.5
+		- S 09:20 - 12:00 = 2.5h
+		- S 13:30 - 14:00 = 0.5h
+		- S 15:00 - 17:35 = 1.5h
+			
+		- Update test case: 45'
+		- Checking sEing email on R3.15:
+		- Verify the fix on R3.15.2:
+		
+	MPV-5709: 0h
+		- Updated Mainpac_R3152 to latest revision
+	
+	MPV-4812: 0h
+		- Updated Mainpac_R3152 to latest revision
+		- Deployed a Blank instance: Setting is added.
+	
+	Issue:
+		- Expedite Order does not sE email when there is no report server found...TBA.
+		- Order - PEingApprover is checking for Operational Settings of Requisition. OrderRule.cs - line 632. 0.5h
+		
+	Git introduction: 1h
+	
+	Support: 1h
+	
+	Email: DRD-397
+
+	MPV-5902: 1h
+	Hotfix: 0.5h
+
+
+10/08: 0.5 + 2.5 + 2 + 2 + 1 + 0.5 + 0.5 = 9
+
+	Daily: 0.5
+
+	MPV-4812: S 9.30 - Stop 10.45 - E (2.5h)
+		- Test executions
+		- "You don't have permission to Select the 'SupplierItem'." error popup when clicking on Supplier Item lookup when there is no permission on Supplier Item
+		
+		
+	MPV-5709: 2h
+		- S 10.45 - Stop 11:34
+		- S 16 - Stop 16h30: 0.5
+		- Execute test case: 0.5
+		- 
+		
+	MPV-5901: S 11.35 - E 14:50 (2h)
+		- Investigate 'Quote'
+				- Accepting a quote:
+			- can make no further changes to the RFQ
+			- the quoted supplier and price details are transferred to the requisition line's Item tab.
+			- Quotes and any Old Bids are removed from the Quote tab
+			- If you accept a quote and the quoted item has a Parts Catalogue record:
+				- Updates the supplier item price on the Parts Catalogue record, for the supplier you are accepting the quote from.
+				- If the supplier is not listed on the Parts Catalogue record, Mainpac adds the supplier to the Parts Catalogue record along with the quoted price.
+		- Write test case
+	
+	MPV-5905: 1h
+	Hotfix: S 16.30 - E 17.00 = 0.5h
+		- http://localhost:81/12343_R3151/Default.aspx
+		
+	Investigate Ad-hoc receipt: 0.5h
+	
+	Ad-hoc stock 'receipt': MPV-2663
+	
+		
+	Issue:
+		- Purchase Requisition: Required By Date is not populated when selecting non-preferred suppliers.TBI.
+		- Estimate cost on Template Work Order & Work Order. TBI.
+		- 'Object reference' when loading Part screen when there is no permission on Supplier Item. TBI.
+		- Requisition Quote screen is not refreshed after submit/accept for quote. TBI. (a validation for report server occurred)
+		
+
+	Convert Requisition Line to Order:
+		You can convert a single requisition line or batch convert multiple requisition lines.
+		A requisition line can be added to:
+			- An existing purchase order. This is the preferred order.
+			- A new purchase order.
+
+		If a requisition line is not added to the preferred order, Mainpac adds a new purchase order.
+
+		Each time you batch convert multiple requisition lines, Mainpac groups the requisition lines onto new purchase orders. Requisition lines are grouped onto to the same purchase order if they have:
+			- the same supplier; and
+			- the same delivery warehouse; and
+			- the same currency.
+			- If you have configured Mainpac to Restrict Requisition Variance, the requisition line may revert to an "Approval PEing" when you attempt to convert it.	
+		
+		
+11/08: 0.5 + 1.5 + 6 = 8
+
+	Daily: 0.5
+	
+	MPV-5709: S 09:30 (1.5h)
+		- Return for a serialised part only have one record. TBI.
+		- Generating receipt for serialised part only work for the 1st time. On 2nd time there is only 1 receipt created. TBI..
+		- Committing receipt for serialised part with duplicated 'Serial Number' show un-meaningful message.
+		- Return record: Bin is disabled for stocked part.
+	
+	MPV-5604: S 11.00 - E 18.00 = 1 + 5 = 6
+		- Draft Order: 000-032
+			- Supplier = WILLS PTY
+			- Currency = AUD
+			- Warehouse = MPSA
+			- Buyer Group = Test
+			- Priority = NULL
+		- Draft Order: 000-033
+			- Supplier = WILLS PTY
+			- Currency = AUD
+			- Warehouse = MPSA
+			- Buyer Group = Test
+			- Priority = 1
+			
+		- Execute test:
+			- Source Warehouse on Requisition Line ~ Destination Warehouse??
+			- When changing Requisition Line type: without reselecting the Priority the Preferred Order value is not refreshed. TBI.
+			- Preferred Order does not work properly if Supplier is populated as a result of selecting Part. TBI.
+			- Currency on Requisition Line? When is it disabled? TBI.
+		
+		- Investigate Preferred Order:
+			- Added by MPV-2555
+			- Revision on MPV-2810: improvements around clearing the preferred order, when it is no longer appropriate
+			- Enhanced by MPV-4926: allow selecting Released Order (no big change to original logic)
+			- Related:
+				- http://jira.mainpac.com.au:8080/browse/MPV-5498 ( 11.3.12.13 )
+				- http://jira.mainpac.com.au:8080/browse/MPV-5532 ( 11.3.12.13 )
+			- Checking to see if the Preferred Order lookup check for Currency, Priority...
+				
+		- Reopening at SVN#12354: 
+			- Clearing currency does not clear the Preferred Order
+			- Out of Supplier, Currency, Delivery Priority, Destination Warehouse and Buyer Group there are only Supplier, Currency and Delivery Priority have real impact to Preferred Order when working with Requisition Line
+			- Clearing or changing source warehouse does not clear the Preferred Order field
+	
+	Issue:
+		- Defect: show Duplicate Operational Asset message...twice! TBI.
+		- Destination Warehouse on Requisition Line is set to Requisition.WarehouseID (MPV-5649)
+			- This could cause problem 
+	
+12/08: 4 + 1 + 1 + 1 = 7
+
+	MPV-5174: 4h
+		- Write test case
+		- Execute test case
+		- Searching with date:
+			- MPV-4204
+			- MPV-3208
+			- Need to have -doublequote- around the date ("12/08/2015") in order for simple search to work with date
+			
+	MPV-5604: Open new follow up case. MPV-5917. 1h
+		
+	- Issue: 
+		- MPV-5171 changed the lookup title to 'Lookup > Preferred Supplier'. TBA. New case to revert this.
+	
+	Estimation: 1h
+		- MPV-5911
+		- MPV-5912
+	
+	- Coordinate (Automation): 1h
+	
+	- Stash: 0.5h
+	
+13/08: 6.5 + 1 = 7.5
+
+	Daily: 0.5h
+	
+	MPV-5602: 6.5h
+		- S 10.00 - E 12.00: 2h
+		- S 13.30 - E 18.00: 4.5h
+		- Test execution
+			- Work Request, Customer Site: working with Macmahons DB - sometimes deleting dialog does not show the delete hyper link.
+	
+	Install kit issue troubleshooting - Log JIRA case? TBI. 1h
+	
+	MPV-5174:
+		- Will new profile have SupplierItemExtELookup profile?
+	
+	
+	Issue:
+		- Something strange with the auto register Work Request
+		- 
+	
+14/08: 0.5 + 6 + 1 
+
+	Review non-Fixversion cases: 0.5h
+	
+	Estimate cases R315.2: 6h
+		- MPV-5682:
+			- Grid with popup edit:
+				- Lookup Tables work list							10
+				- Receipt Work List > Receipts grid					10
+				- Transaction work list								10
+				- Asset Management > Meter Usage work list			10
+				- Asset Management > Meter Reading work list		10
+				- Reports Management work list						10
+	
+		MPV-5789: TBI.
+	
+	Estimate DRD-5795: 0.5
+		- Investigate ‘usage’ based tasks - how it work with forecasting work order
+	Estimate DRD-5811: 0.5
+	
+	- Automation:
+		- Environment & Overview session
+	
+17/08: 1 + 1.5 + 1.5 + 1.5 + 1 + 1 = 7.5
+
+	MPV:5908
+		- Reproduce: 1h
+		- MPV-5698 is decided to had caused the change.
+	
+	Review R3.15.2 cases: 1.5h
+	
+	MPV-5912: 1.5h
+		- Write test cases: S 14.30 - E 16.30
+			- Change error message when committing receipts
+			- In-line edit (Bulk edit)?
+			- Pop-up edit
+
+	MPV-5927: S 16.30 - E 18.00 = 1.5h
+			R3.15				R3.15.1				R3.15.2
+			MPV-5866								MPV-5868
+			MPV-5858								MPV-5927
+		- Write test case:
+			- Check the DateTime Column shows Date&Time on result grids.
+			- Check the Format via Administration > Global Settings > System > Formats 
+			
+	CRM: Adding dashboard component (1h)
+	
+	MPV-5906: 1h
+		- Wrong smtp still show success message
+	
+18/08: 1.5 + 1.5 + 0.5 + 1 + 0.5 + 1 = 6
+
+		MPV-5906: 1.5h
+			- Make sure email history is not created
+			- Write test case
+			- Dicussion: 0.5h
+		
+	MPV-5927: S 16.00 - E@
+	
+		Training & Support: 1.5h
+	
+		Update tracking file: 0.5h
+	
+		MPV-5821: 1h
+	
+		MPV-5868: 0.5h
+		
+		CRM: 1h
+	
+19/08: 3 + 1 + 0.5 + 1.5 + 2 = 7.5
+
+		MPV-5912: 3h
+			- S 09:30 - E 12:30
+			- Execute test cases
+			Docket Number <Docket number> 	has already been provided against Order Number <Order no>
+			Docket Number ABCD 				has already been provided against Order Number 000-029
+	
+		MPV-5916: 1h
+			- S 12:30 - E 13:30
+	
+		Hotfix: 0.5h
+	
+		Support: 1.5h
+	
+		MPV-5915: 2h
+
+		Issues:
+		- "The operation is not valid for the state of the transaction.": Backed up database '3152.bak'. TBI.
+		- Bin is disabled for Stocked Part. TBI.
+	
+20/08: 0.5 + 1.5 + 1.5 + 1.5 + 2 = 7
+
+		MPV-5927: 1.5h
+			- S 10.30 - E 12.00
+	
+		MPV-5868: 0.5 + 1 = 1.5h
+			- S 13:30 - Stop 14:00
+			- S 14.30 - E 15.30
+		
+		Hotfix 11.3.15.1: 0.5h
+			- S 14:00 - E 14:30
+	
+	MPV-5906: 2h
+		- S 15.30 - E 18.00: 2
+		- Subtract 0.5h
+	
+		MPV-5709: (Investigate) 1.5h
+			- Check old behavior: Bin for Stock Part is not disabled on Return grid. 
+			- Now it seems that Serialised Stock Part has its Bin disabled. TBA.
+		
+	Issues:
+		- Requisition grid is not refreshed after adding similar Requistion Line screen is closed. TBI-TBA.
+	
+21/08: 1.5 + 6 + 1 = 8.5
+
+		MPV-5906: 1.5 + 4.5 = 6
+			- S 09.30 - S 11h
+			- S 14.00 - E 18.50
+		
+		Verify Bug: 1.5h
+			MPV-3994: S 10:50
+				- MPV-4038
+			DRD-4296: 
+			DRD-4256: 
+					
+		Support: 1h
+		Issues:
+			- Record is updated by another user message popup after Submitting/Accepting Quote. TBI.
+			- Approval required emails sent to which approvers? TBI. 1h.
+				- Email Approver setting is enabled.
+	
+		
+24/08:	
+			
+	
+		MPV-5898: 5.5h
+			- Write test cases.
+				- S 09:30 - E 17:00: 2.5 + 3.5 = 6 - 1 = 5
+				- Enabled params:
+					- OperationalAsset
+					- Location
+					- ProblemLine
+					- Description
+					- Requested By
+					- Email
+					- Phone
+					- Required Date
+					- Date Requested
+				- Functional Failure is not supported: Object reference occurred when trying to add a request with this paramater
+				- Work Type is not supported?
+				// - Location is not populated after selecting Operational Asset
+				- Edit screen does not retain the added values
+				- General fields are not saved when there is a template specified
+				
+			-   
+			<CONTROL ID="WorkOrderID">
+				<LABEL>WorkOrder</LABEL>
+				<TYPE>MPLookup</TYPE>
+				<DATA>WorkOrderID</DATA>
+				<PARAMS>WorkOrder</PARAMS>
+				<ENABLED>False</ENABLED>
+			</CONTROL>
+		
+		Support: 1h
+	
+		MPV-5927: 0.5h
+
+		DRD-5807: Est 0.5h
+			- Deploy MS Project Plugin with Configuration center
+				- Deploying new
+				- Update existing
+			- Changing working instance
+			- Uploading
+			- Licencing?
+		
+		
+		MPV-5821: 0.5h
+	
+	MPV-5554
+		
+25/08: 1 + 1 + 1 + 1.5 + ? = 4.5
+
+		MPV-5554: 1h
+				
+		Support-Discuss: 1h
+
+		MPV-5906: 1.5
+			- Sending to Receipient failed 
+			- System shows message "The Recipient email 'x@tma.com.vn' does not exist on the email server." when email of BCC and CC are wrong. TBI
+				- Need to make clear of the 'type' of the Recipient or CC or BCC
+		
+		MPV-5898: 1h
+		
+		
+		
+26/08: 2.5 + 1 + 0.5 + 1.5 + 1 + 1.5 = 7.5
+	
+		MPV-5821: 2.5h
+			- S 09.30 - E 11.40
+			- Look like there is only one Status History record for an Asset at a time
+			
+		MPV-5554: 1h
+			- S 11.45 - E 14
+		
+		Support: 0.5h
+			- S 14.00 - 14.30
+	
+		MPV-5906: 1.5
+			- S 14.30 - 16.00
+			- Sending to one email addresses should system cancel email sending when an email is found wrong or continue to send to the correct email and still show the validation?
+				- still send email to correct address but no email history created.
+			
+			- improving messsage somewhere
+				- return button on release Order dialog. TBI.
+	
+		Added MPV-5968: 1h
+		
+		Estimation: 1.5h
+		
+27/08:
+	
+	http://jira.mainpac.com.au:8080/browse/DRD-5808 : Stash and Bamboo Investigation
+	http://jira.mainpac.com.au:8080/browse/MPV-4252 : Ingenia MS Project Plugin: Part 1: Verify plugin
+	http://jira.mainpac.com.au:8080/browse/DRD-5807 : Review MS Project Plugin
+	
+	
+	Estimation: 3 + 3 = 6
+		- S 09.00 - 16.30
+	
+	http://jira.mainpac.com.au:8080/browse/MPV-5792 : Allow the 'Move to Draft' option will be available on both the tracking grid and the approval pending grid as well as on page and batch action
+		- To (added comment)
+			1- add the 'Move to Draft' action to Buyer Work List - Approval Pending grid
+			2- enable 'Move to Draft' action on Order page action list
+			3- allow 'Move to Draft' batch action on Approval Pending Orders
+			
+		- Help text:
+			- Advanced Purchasing Management > Purchase Order Management > Step 6. Manage Purchase Orders > Reset an Advanced Purchase Order to Draft Status:
+				• You may reset purchase orders with the status "Approval Pending", "Order Pending" or "Released" back to "Draft" status.
+		
+	http://jira.mainpac.com.au:8080/browse/MPV-5964 : Issue when using "Move to Draft" for an authorised order
+		- Suggest to
+			- remove 'Move To Draft" action from Buyer Work List Screen > Orders Pending Release grid
+			Or
+			- allow move authorized to draft order
+				- Orders Pending Release grid
+				- Page action
+				- Batch action
+		
+	http://jira.mainpac.com.au:8080/browse/MPV-5966: Closed as 'Cannot Reproduce'		
+		
+	http://jira.mainpac.com.au:8080/browse/MPV-5967 :
+		- Issue #2: Addressed in MPV-5807
+		- Issue #3: Addressed by http://jira.mainpac.com.au:8080/browse/MPV-5698
+		
+	MPV-5559: 1.5h
+		- Impact on not having delete Stocktake line?
+		- Any similar cases?
+		- Run check: S 4.30 - E 6.00	
+		
+28/08:
+
+	Estimation: 6h
+			DRD-5807: 
+		MPV-5974	5
+		MPV-5975	6
+		MPV-5976	4
+		MPV-5977	5.5
+		MPV-5978	2
+
+	
+	Sprint 2 - Reporting: 1.5h
+	
+		Overall:
+			- Case status
+				- Reopened 24%
+				- Increased time 40%
+				
+			- Reopened:
+				MPV-4469 	1		discuss
+				MPV-5898	1		typos
+				MPV-5906	2 		discuss
+				MPV-5919	1		wrong commit
+				MPV-5922 	1		-
+				MPV-5927	1		typos
+	
+	ACT Health Migration:
+		- S 19.00 - 
+		- MMA-226:
+			- Duplicate Invoice
+		
+	
+	
+31/08: 0.5 + 1 + 1 + 0.5 + 1 + 1.5 = 5.5 + 2?
+
+	ACT Health:
+		- Asset
+		- Work Order
+		- Requisition
+		
+	MPV-5980: 0.5h
+		- 11.00 - 11.30
+		- Write test cases
+		
+	MPV-5972: 1h
+		- 13.30 - 15.00
+		- Write test cases
+		
+	MPV-5945: 1h
+		- 15.00 - 16.00
+		
+	MPV-5944: 0.5
+		- 16.00 - 16.30
+		
+	Support: 1h
+	
+	Investigate: 1.5h
+		- Validator for DiscountValue field on Invoice Line
+		- 'Discount Rate' must be a value between -100 and 100. TBI.
+			- DRD-5630
+			- MPV-2963
+	Issue:
+		- Resource name contains '&' character cannot be added to work order step. TBI.
+		
+	MPV-5974: 1.5h
+		- Manually install the plugin
+		
+01/09: 3.5 + 1 + 0.5 + 1.5 + 1 + 0.5 = 6.5
+
+		MPV-5974: 3.5h
+			- MS plugin 
+				- RUN SQL file (requires SQL Agent)
+					- Change user
+					- Change folder pathname
+				- Create share folder (instance folder)
+					- Copy files from Helpers\Templates\MSProjectPlugin to instance folder:
+						- MainpacUpload.xsd
+						- MSP_ProjectExport.dtsx
+						- MSP_ProjectImport.dtsx
+					- Update copied files: (MSP_ProjectExport.dtsx & MSP_ProjectImport.dtsx)
+						- Change folder path
+						- Update connection string to Mainpac EAM instance
+					- Update MainpacTemplate.mpp
+						- Module 11
+						- Module 31
+						- GetMainpacWorkOrder code
+						
+				- Prepare data:
+					- Update PEG to all work orders
+					- Update Work Program to work orders
+						Update LabourResource
+						set AlternateKey = LabourResourceID
+
+						Update LabourResource
+						set PEGID = 1001
+
+						Update OperationalView
+						set AlternateKey = OperationalViewID
+			
+		MPV-5950: 1h
+			- 15.30 - 16.30
+		
+		MPV-5975: 0.5h
+			- Configuration that can be updated:
+				- Folder path
+				- EAM instance details
+				- MainpacTemplate.mpp (support export template - user can save for later use?)
+				- dtsx files are updated
+		
+		Support: 1.5h
+			Forecast work order - Usage based task:
+						- help/index.htm#13576.htm
+
+		Add MPV-5987: 1h
+		Add MPV-5988: 0.5h
+		
+03/09: 2.5 + 0.5 + 1.5 + 1 + 1 + 0.5 = 7
+
+		Automation (Review): 1h
+			- 
+		(email) + BDU request: 1h
+	
+	MPV-5975: 0
+		- Folder path
+		- EAM instance details
+		- MainpacTemplate.mpp (support export template - user can save for later use?)
+		- dtsx files are updated
+		
+	MPV-5976: 0
+		- View current instance
+			- Instance name?
+			- 
+	
+		- S 09.30
+		
+		MPV-5971: 1.5h
+			- Date Last Scheduled (Sync)
+			- Forecast Work Order - Suppressing: 1.5h
+				- 2.30 - 4.00
+			- MPV-5620: Tasks at the same level should not synchronise each other
+		
+		MPV-5890: 0.5h
+		
+		Investigate: 2.5h 
+			Required by Date: 1h
+				- http://jira.mainpac.com.au:8080/browse/MPV-1698 : Requisition line - don't default the required by date to today 
+				- http://jira.mainpac.com.au:8080/browse/MPV-2362 : set the requisition line's required date to 'today' plus the item's preferred supplier's lead time : Passed R3152
+				
+			Cost on Work Order: 1h
+				- 
+			Add JIRA: 1h (0.5h)
+				- MPV-5992
+		
+04/09: 3 + 1 + 2 = 6
+
+	MPV-5980: 2.5 + 0.5 = 3
+		9.30 - 15.00
+		
+	Support: 1h
+	
+	MPV-5972: 2h left
+		- Work Order work flow
+	
+		
+	Issue: 
+		- Cannot add Cost only Invoice Line when Numeric Format is set to .0000###### OR .000####### (.00#### still works). TBA.
+		- Invoice Line: Selecting an Order line then clear the selection result in the Quantity Invoiced = 0. TBA.
+		- Invoice Line: Validation for Cost Distribution is not fired. TBI.
+		- Numeric format .0000###### OR .000####### seems does not work. TBI. MPV-5534.
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+	FitNesse
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

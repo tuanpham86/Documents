@@ -1,0 +1,119 @@
+Case is verified as Passed on 11.3.15.1 - SVN#12011.
+Please get more details from attached test case file [^Mainpac Test case for MPV-5627.xlsx].
+
+
+kimngan721987@gmail.com
+nguyen.ngoc.bao2012@gmail.com
+
+
+Case is reopened on 11.3.12.13 GA - SVN#11920.
+
+EXEC [dbo].[up_GrantPermissionsForLogin] 'NT AUTHORITY\NETWORK SERVICE'
+
+UPDATE [User] SET [Password] = 'B0-81-DB-E8-5E-1E-C3-FF-C3-D4-E7-D0-22-74-00-CD';
+GO
+
+123
+UPDATE [User] SET [Password] = '5F-A2-85-E1-BE-BE-0A-66-23-E3-3A-FC-04-A1-FB-D5';
+GO
+
+SVN Username	SVN Password
+PhamVanTuan		p7361D3H7Wg4Eq4
+
+Clear SQL cache:
+
+							CHECKPOINT; 
+							GO 
+							DBCC FreeProcCache;
+							DBCC DROPCLEANBUFFERS; 
+							GO
+
+[2:52:43 PM] Qui Nguyen: ITEasy:
+
+Host : sftp://ftp.mainpac.com.au
+User : tma
+Pass : tmaftp13
+Port : 22
+
+shutdown -s -f -t 11400
+
+http://localhost:88/magento/index.php/install/wizard/end/
+60c6eb220524e1f53ecfd071426bbbff
+
+Migrate - ATI - V7 - User:
+Mainpac	44693444882820345158 (blank)
+u1	60050583883411442443 (123)
+
+
+To disable write permission on backup data:
+- Remove parent inheritance
+- Update permission for NETWORK SERVICE AND (OR) Administration
+
+MAC
+C8600054E510
+
+wmic DISKDRIVE GET SerialNumber
+2020202020202020202020203257334150465859
+W2A3FPYX
+
+
+...
+<staticContent>
+      <remove fileExtension=".json" />
+      <mimeMap fileExtension=".json" mimeType="application/json" />
+</staticContent>
+...
+
+------------------
+Cloud Testing		
+Big Data
+Internet Of Things
+TDD
+Dev Testing
+Agile & Dev Ops
+
+Financial
+Retail
+BPO
+HLS
+
+EQ
+Team building
+Leadership
+	Character
+	Commitment
+	Courage
+	Confidence
+	Communication
+Communication
+----------------
+Check table columns
+
+SELECT 
+    c.name 'Column Name',
+    t.Name 'Data type',
+    c.max_length 'Max Length',
+    c.precision ,
+    c.scale ,
+    c.is_nullable,
+    ISNULL(i.is_primary_key, 0) 'Primary Key'
+FROM    
+    sys.columns c
+INNER JOIN 
+    sys.types t ON c.system_type_id = t.system_type_id
+LEFT OUTER JOIN 
+    sys.index_columns ic ON ic.object_id = c.object_id AND ic.column_id = c.column_id
+LEFT OUTER JOIN 
+    sys.indexes i ON ic.object_id = i.object_id AND ic.index_id = i.index_id
+WHERE
+    c.object_id = OBJECT_ID('RequisitionLine')
+----------------
+http://mptestsrv.cloudapp.net/DPsTestServices/DispatchService.svc/DispatchServiceHttp
+
+Contract: IEventProcessingService
+
+
+----
+
+Accuphase 
+Westminster

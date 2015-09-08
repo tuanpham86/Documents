@@ -1,0 +1,25 @@
+
+All JIRA:
+																				Closed	In Progress	Open	Resolved	Grand Total
+	AUTO-2: Search screens																					1
+	AUTO-3: Processing Runs																					1
+	AUTO-4: Profiles: Inventory Purchasing																	1
+	AUTO-5: Email																							1
+	AUTO-6: Reports																							1
+	AUTO-9: Issue flow																						1
+	AUTO-12: Requisition Flow																				1
+	AUTO-13: Approval Route																					1
+	AUTO-14: Profiles Items																					1
+	AUTO-15: Condition Based Monitoring (CBM)																1
+
+	AUTO-8: Automated testing of migrated databases	
+	AUTO-16: Testing of migration databases: change from telerik to winform									1
+
+	AUTO-10: Automated Testing for Release Package													1
+	AUTO-11: Automated testing for MP Connect														1
+
+
+	AUTO-17: Improvement for End to End testing											1
+		- JIRA case by case
+		- 
+

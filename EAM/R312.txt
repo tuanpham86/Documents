@@ -1,0 +1,232 @@
+MPV-5482:
+- authorised requisition is displayed on the buyer worklist
+	> it can be assigned to a new buyer group, and buyer. 
+- that buyer may require an amendment
+	> which will result in the requisition line being edited and re-submitted for approval.
+
+> This process of editing and resubmitting the RequisitionLine should not alter the buyer group and buyer.
+> Once the requisition line has been re-authorised the buyer that sent it for amendment should still be the buyer, and it should still belong to their buyer group
+
+Req.A
+> Buyer Group A
+> Member = User A
+
+User A sent Req.A to amendment
+User B re-authorised Req.A
+
+Expected result: 
+Req.A
+> Buyer Group A
+> Member = User A
+
+
+MPV-5512: 
+- ReceiptLine.ReceivedDate < the associated Order.OrderDate.
+	> Validation:
+		> Generate receipt: FAILED
+		> Edit receipt:
+			> Grid editing: CORRECT
+			> EDIT scr: FAILED
+		> Commit receipt: FAILED
+		> View:
+		
+	> RESULT:
+		> Generate receipt: CORRECT
+		> Edit receipt: 
+			> Grid editing: 
+			> EDIT scr: 
+		> Commit receipt: 
+		> View:	
+The message is "Date Received can not be earlier than the Order Date".
+
+- User opv: Test
+	> Setting turn on
+- Order (receipt) opv: MPSA
+	> Setting turn off
+
+	
+MPV-5495:
+- Building MP connect DATA - from tag 3.12 - requires putting config file from trunk - requires edit client-config file from 'ImporterService' to ImporterServiceWin
+- Scope:
+	> Part Catalogue
+	> Part
+	> Supplier Item
+	> Supplier Agreement Item
+	> Isolation level mode?
+		> opt to leave as default
+- Test
+ > Import 500 records for each before and after pairs
+ > Compare
+ 	> Part Catalogue
+		Before: 3m30s
+		After: 1m10s
+	> Supplier Item
+		Before: 3m10s
+		After: 1m00s
+	> Supplier Agreement
+		Before: 2m30s
+		After: 20s
+- Questions:
+	> No source file is created after saving??
+
+MPV-5498
+> Currently Requisition lines can be added to the same order if they have the same:
+	• Supplier
+	• Destination Warehouse
+	• Buyer Group
+	• Currency
+> New Operational Setting
+	• Purchasing > Rules & Defaults > Separate Inventory Orders: When ticked Purchase and Replenishment requisition lines are grouped onto separate orders
+	• The extra grouping would not be applied for the 'Preferred Order' lookup, or the 'Add to Draft Order' lookup
+	• This grouping occurs only when generating new orders
+		> Create requisition line:
+			> Type: 
+				• Purchase
+				• Replenishment
+			> Match:
+				• Supplier: WILLS PTY
+				• Destination Warehouse: 
+				• Buyer Group: Test
+				• Currency: AUD
+				
+MPV-5513: [15:15]
+> Validation check to the Total Tax amount <= the Total Price (Tax Ex).
+	> Edit: Change on 'Total Tax'
+		• Total Tax = Total Price
+		• Total Tax > Total Price
+	> Add:
+		• Total Tax = 0
+		• Total Tax = Total Price
+	> Generate:
+		• Invoice total = 0
+		• Invoice total > 0, tax = 0
+		• Invoice total <0, tax = 0
+
+MPV-5511:
+> Can use several docket number for a same order's order lines?
+
+
+MPV-5520:
+> Cheops: CSSP : Construction Software
+	• Effective control over budget, committed, incurred and actual costs in the areas of Sub Contractors, Materials, Labour, ...
+
+> Previous:
+	• edit the price of an order line after it has been received:
+		> receipt cost is adjusted.
+		> variance cost is passed through to the inventory item, or the relevant department/work order/ op asset (transaction created).
+	• 'Draft' and 'Require Amendment' purchase orders can be edited.	
+
+> Need:
+	• New config option: Purchasing > Rules & Defaults > Prevent edit after Receipt
+	• Order Screen:
+		- Disable the edit action on the orderLine grid, for any lines which have been received or invoiced.
+			> 1 line
+			> 2 lines - 1 line is received
+			> 2 lines - both are received
+			
+	• Order Line screen:
+		- Disable the edit action on the order line screen, if the order line has been received or invoiced.
+			> 
+
+MPV-5530:
+	♥ New configuration option:
+		• Purchasing > Rules and Defaults > Force 'Invoice to Credit'
+	♦ If:
+		• Invoice amount < 0 AND invoice line references a receipt 
+	♣ Then:
+		• The ‘Invoice to Credit’ field to be selected on the invoice header
+	♠ Else
+		• If no receipts are referenced then do not require the ‘Invoice to Credit’ field to be selected on the invoice header.
+			
+
+MPV-5525:
+	- Commit invoice
+		- 50 lines:
+			B: 1m7s		A: 18.42s ~19s  (67 to 19) ~ 350%
+		- 350+ lines:
+			B: 10m26	A: 4m12			(626 to 252) ~ 250%	
+	- Querying under database
+		- Select all order line then compare to selective query
+			
+
+MPV-5532:
+	- Changes:
+		1. New table WarehousePriorityAddressList
+		2. New grid on warehouse screen
+			- Delivery Address applies the same lookup rules that the 'Address' field on the Warehouse screen.
+			- Entries are unique per Warehouse and Delivery Priority
+		3. New 'DeliveryPriorityID' field in the Order table.
+		4. 'Delivery Priority' on the Order Screen as an editable field.
+		5. Delivery Priority is included in the Order search criteria and results
+		6. Include the Delivery Priority in the 'Draft Orders' grid on the Buyer Worklist
+		7. New constraint, to allow for a new TableKey= 'Delivery Priority'
+		8. New Key is included in the TableKey results. It can be included in the Purchasing section
+		9. Priority lookup is changed to linked to the new AddressKey = 'Delivery Priority'
+		10. 'Preferred Order' lookup includes the Priority in the Order Filtering. (Conditions?)
+		11. Include the Delivery Priority in the Grouping rules to create separate orders
+		12. 'Assign to Draft Order': lookup includes the Delivery Priority in the Order Filtering
+		13. Script to:
+			- Move the existing Priority values so that they use the new key. Update the requisitionLine records to point to the new values
+				- Find all the LookupTable records currently linked to the RequisitionLine.PriorityID
+				- New LookupTable record is created (with TableKey = DeliveryPriority) and then linked back to the RequisitionLineID
+
+MPV-5533:
+	PartsCatalogue:
+		- CoreExchange flag:
+			+ new field in table
+			+ new field on screen
+	SupplierItem:
+		- two new fields 'CoreCost' and 'CoreLeadTime' 
+			+ in the SupplierItem table
+			+ in the 'Supplier' grids, displayed on the PartsCatalogue, Part, and Supplier screens (to the right of the Unit Price)
+
+	SupplierItem.PartsCatalogueID = OrderLine.PartsCatalogueID
+		and 
+	SupplierItem.StockItemID = OrderLine.StockItemID
+		and 
+	SupplierItem.SupplierID = Selected SupplierID
+	
+Notes:
+	- Core Return screen should be put above Currency
+	
+08 Apr:
+	- Core Value and Core Lead Time are now editable while adding profile item even when the Core Exchange flag is false. This happen after the validation for Core Lead Time occurs.
+		=> Cannot save the supplier Item.
+	- Row Status include Partial?
+	
+	 	
+Issue 6:
+	Order Line:
+		- +ve quantity
+		- -ve quantity
+	Invoice Work List:
+		- 
+
+Questions:
+	- Profile Item?
+	- 
+			
+		
+		
+Provide Test case:	
+- MPV-5526: done
+- MPV-5525:	done
+
+Log time JIRA case:
+- MPV-5483: + 0.25
+- MPV-5495: +4, added importfiles.zip
+		
+	
+	
+	
+	
+	
+	
+	
+
+				
+■ Found setting that only display in ADV
+• Separate Inventory Orders
+• Single commit of Docket Number
+
+

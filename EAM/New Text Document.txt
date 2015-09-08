@@ -1,0 +1,38 @@
+﻿http_proxy 	http://10.10.10.10:8080/
+	
+										"%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis –i
+
+svn log -v --limit 100 https://mpdev.cloudapp.net/svn/mainpac/trunk
+
+										svn log -v -r 0:N --limit 100 [--stop-on-copy] https://mpdev.cloudapp.net/svn/mainpac/trunk
+
+
+2147483647 (Max memory)
+
+
+										password: 5F-A2-85-E1-BE-BE-0A-66-23-E3-3A-FC-04-A1-FB-D5 => 123
+
+
+EXEC [dbo].[up_GrantPermissionsForLogin] 'NT AUTHORITY\NETWORK SERVICE'
+
+
+
+"%WINDIR%\System32\inetsrv\appcmd.exe" set config "YourSiteNameHere" -section:requestFiltering -requestLimits.maxAllowedContentLength:2000000000 
+
+C:\WIndows\System32\inetsrv\appcmd.exe" set config "http://localhost/8236" -section:requestFiltering -requestLimits.maxAllowedContentLength:2000000000 
+
+<IIS> SELECT the Site(s) > Request Filtering:
+
+Set Maximum allowed content length:
+30000000 ~ 28.6102295 megabytes
+512000000 ~ 488.28125 megabytes
+
+	http://10.133.24.38/MainpacServicesUATTest/DispatchService.svc/DispatchServiceHttp
+	
+Top Suppliers that Macmahon is making contract with:
+http://www.westrac.com.au/Pages/default.aspx
+http://www.miningandconstruction.sandvik.com/au
+http://www.atlascopco.com.au/auus/
+http://hitachicm.com.au/
+http://www.hastingsdeering.com.au/home/
+

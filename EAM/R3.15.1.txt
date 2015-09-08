@@ -1,0 +1,1406 @@
+MPV-5535:
+• Original MPV-4512:
+	- Batch actions doesn't check Order status before running
+	- 
+
+Breakdown:
+- Check old case: 1h
+- Check old behavior: 30'	
+- Check current behavior: 30'
+- Retest time if any implement: 2
+
+MPV-5541: 2h
+- Check current behavior: 30'
+- Real test: 1h
+	- Self Approval: 30'
+	- Force Delegate: 30'
+	- 
+	
+MPV-5635: 2.5h + 2h
+- Check current behavior: 30'
+- Real test: 1.5h
+	- Adding: 30'
+	- Editing: 30'
+	- Update Type field: 30'
+	
+- Investigating correct bahavior: 2h
+
+- Upgrade script
+- Mainpac Connect importing Measure
+	
+MPV-5634: 1.45h
+- Check current behavior: 30'
+- Deploying: ~20'
+- Real test: 1h
+
+Execution:
+1: Create Validated Measure Value (VT1) which has no value
+2: Create Measure (M1) contain VT1
+3: Create Practice, Test ...
+4: Create Condition with M1 
+
+
+MPV-5613: 2h
+	- Reproduce R3.15: 30'
+	- Deploying: 15'
+	- Execution: 1h15' 
+	
+MPV-5641: 1.45 (1)
+
+MPV-5642: 2.5 (1)
+
+
+17/04: 6+
+
+	MPV-5614: 1
+
+	Investigating: 1
+
+	MPV-5617: 1.5
+
+	MPV-5625: 1
+
+	Support: 1
+
+	MPV-5622: 0.5
+	
+	MPV-5624: 0.5
+
+20/04:
+	MPV-5645: 1h (1h30)
+		- Save > Populate ?
+			- 
+		- Save > Populate > Process ?
+			- 
+	Report: 1h
+	
+	Support: 0.5h (Work order Parts)
+		
+	
+	MPV-5618: 3h (2.5h)
+		- http://jira.mainpac.com.au:8080/browse/MPV-5648
+	
+	MPV-5619: 1.5h (1.5h)
+		- Issue with ad-hoc replenishment requisition
+		- http://jira.mainpac.com.au:8080/browse/MPV-5649
+		
+21/04:
+	Add JIRA cases: 0.5h
+	
+	MPV-5626: 0.5h
+	
+	Support: 0.5h
+	
+	MPV-5630: 5.5h
+		- Investigating: 2h (2.5h)
+			- Supplier Agreement: 0.5h
+			- Scope: 0.5h
+		- Write test case: 1.5h
+		- Test Execution: 2h
+	
+		- Requisition Line:
+			- Type:
+				- Purchase
+				- Stores
+				- Replenishment		
+			- Action:
+				- Add
+				- Edit
+				- Batch process
+				
+		- Supplier Agreement:
+			- Supplier Level Agreement
+			- Supply Agreement is active
+			- Order Value Breakpoints
+
+		- Profile:
+			- following normal Op View rules?
+			- order?
+			
+22/04:
+	Daily: 0.5h
+	
+	Support: 1.5h
+	
+	MPV-5627: 2.5h
+		- Test Execution: 2.5h
+			- Running 55 test cases: = 55 * (2m x 1) = 110
+			
+	MPV-5621: (1.5h)
+
+	Training: 2h
+			
+23/04:
+
+	Daily: 0.5h
+	
+	Training: 1h
+	
+	Support: 1h
+	
+	MPV-5621: 2h
+	
+	MPV-5623: 2h
+		- Revision 11987
+			- Using 11961 instance to check before
+			- Restore
+			- Check after with 12011
+			
+	QA Meeting: 1h
+	
+	Package: 1h 
+	
+24/04:
+
+	Daily: 0.5h
+	
+	MPV-5623: 2h
+		- Revision 11987
+			- Using 11961 instance to check before:
+				- 50 records (PM274): 18s
+				- 135 records (PM212): 54s
+			- Restore
+			- Check after with 12011:
+				- 50 records (PM274): 18s
+				- 135 records (PM212): 52s
+			
+	Investigating requisition status issue: 
+		- Start 2h00
+		- End 4h
+	=> Cannot close the case properly. Pending for installing new instance.
+	
+	Training: 1h
+	
+	Transfer cases:
+		MPV-5616
+		MPV-5629
+		MPV-5540
+		MPV-5628
+
+27/04: 1 + 0.5 + 0.5 + 2.5 + 1.5 + 1 = 7
+
+	MPV-5623: 1h
+		Before
+			43: 42s
+			380: 3'15s
+		After
+			43: 1'
+			380: 3'15s
+			
+	MPV-5630:
+		- Write TC: 1h (x)
+		
+	MPV-5541:
+		- Setup: 2.5h (x)
+		
+	Raise case: MPV-5668: 0.5h (x)
+	
+	Daily: 0.5h (x)
+		
+	Package check:	1.5h (x)		
+
+04/05: 
+	Daily: 0.5h
+	
+	MPV-5671: Investigating: 0.5h
+	
+	Training: 1h
+	
+	MPV-5668: 1h
+	
+	MPV-5639: 1h (support)
+	
+	MPV-5665: Reproduce Bin Issue: 1.5h
+		- How many flows to have Inventory Transaction?
+			- Item price
+			- Tax
+			- Input tax
+			- or any other value change?
+	
+	MPV-5630: 1h
+	
+	Toast: 0.5h
+	
+05/05:
+	Daily: 0.5h
+	
+	Bug [TBA]: Meter lookup on Meter Reading and Meter Usage work list return error message: 0.5h
+		- MPV-5673
+		
+	Training: 1h
+	
+	DRD-5657: 0.5h
+	
+	Update Test database: 0.5h
+	
+	Support: 0.5h
+	
+	MPV-5630: 2.5h	
+	
+	MPV-5639: 1h+
+	
+06/05:
+	Daily: 0.5h
+	
+	Review: 2h
+		- MPV-5636: Test cases is decent
+		- MPV-5616: No log work?
+		- MPV-5664: 
+		- 
+	Support: 0.5h
+		
+	MPV-5671: (5h): 2h 
+		- Investigate: 0.5h
+		- TCs writing: 1.5h
+		- Execution: 3h
+		
+	MPV-5660: 3h
+	
+	MPV-5672: 0.25h
+	
+	MPV-5648: 0.25h
+	
+	Issue: Object reference when adding Transaction: To be added
+	
+07/05:
+	
+	Investigate: Issue: Object reference on Order Line: 1h
+		- Tracking: OrderID is increased abnormally
+	
+	MPV-5638: 2.5h
+	
+	MPV-5671: 1h
+	
+08/05:
+
+	Daily: 0.5h
+	
+	MPV-5630: 1.5h
+	
+	MPV-5648: 1h
+	
+	To log work on CRM:
+	
+	MPV-
+	
+	Bao to LOG CRM for MPV-5636 (2h)
+	
+11/05:
+
+	Daily: 0.5h
+	
+	MPV-5541: DRD-5685, MPV-5144: 0.5h
+	
+	MPV-5660: 10h start (1h)
+		- Issue: When Serialized only enabled for Catalogue: System show message "Receipts for serial items must have a quantity of either one or zero"
+	
+	Support: 1h (MPV-5676)
+
+	Issue: 'Commit Docket Number' does not work with Serialized part: To be investigate
+	
+	MPV-5674: Invoice Approval: 2h
+	
+	PC's down time (HDD issue): 2.5h
+	
+	MPV-5672: Writing test case: 1h
+	
+	Toast: 0.5h
+	
+12/05:
+
+	Daily: 0.5h
+	
+	Support: 1h
+	
+	MPV-5639: (Default Supplier Item): 1+
+	- Default warehouse for Requisition Line? (Order Line - MPV-???? - Help text - )
+		- When the part is stock in 2+ warehouses: ...
+		- When the part is stock in 1 warehouses: ...
+	- 
+	MPV-5684: 0.5h
+	
+	MPV-5674: Invoice Approval: 2h
+		- Requisition Type affect the Invoice Approval process
+		- Originators vs Requisitioners => Original Requisitioners
+		- Approval Route: Invoice vs Requisition
+		- Email?
+	
+	MPV-5660: 3h
+	MPV-5674: 1
+	
+	Issue: 
+	- Order Description / Part Description on Order Edit screen is having trouble (validate)
+	- Receipt: Received quantity? 'Accepted quantity'?
+	- Convert Requisition: Tolerance message - 
+	
+13/05:
+	
+	Daily: 0.5h
+	
+	MPV-5674: 1.5h
+	
+	MPV-5672: 3h
+	
+	MPV-5660: 2h
+	
+	MPV-5701: 1h
+	
+14/05:
+
+	Daily: 0.5h
+	
+	Support: 1h
+	
+	MPV-5701: 1h
+	
+	MPV-5709: 1h
+	
+	MPV-5674: 1.5h
+	
+	MPV-5637: 2.5h
+	
+	Inputting CRM: 
+		- MPV-5701: Issue 81
+		- MPV-5674: Issue 50
+	
+	Macmahons issues: https://docs.google.com/spreadsheets/d/1wFVtdTDdC-meteyFyXnitIbviYdb1eL9p7VGDnh9inc/edit#gid=676382629
+	
+15/05:
+
+	Daily: 0.5h
+	
+	MPV-5696: 1h
+	
+	MPV-5637: 3h
+	
+	MPV-5674
+	
+	
+18/05:
+
+	Daily: 0.5h
+	MPV-5637: 0.5h
+	MPV-5674: 0.5h
+	Support: 1h
+	MPV-5639: 1h (Support)
+	
+	Retro: 1.5h
+	Toast: 0.5?
+	
+	Issue: 
+		- Non-stock part: Warehouse default to MPSA while PC have multiple preferred supplier items
+		- Non-stock part: Supplier is default incorrectly when PC have multiple preferred supplier items
+	
+19/05:
+	
+	Daily: 0.5h
+	CRM: 21/-4: 1h
+	Support: 1.5h
+	MPV-5665: 0h - To check Lisa's comment!
+	MPV-5637: 1h
+	MPV-5639:
+		- http://jira.mainpac.com.au:8080/browse/MPV-5249
+		- http://jira.mainpac.com.au:8080/browse/MPV-5067
+		
+	MPV-5702: 2h
+		- To check on validation rule
+	
+	Investigate new issue: 2h (abc)
+	
+20/05:
+
+	Daily: 15'
+	MPV-5702: 1.5h
+	Issue:
+		- Recommend Item: Submit all, Batch actions
+		- Import & Export settings - cannot export - parse error
+	MPV-5721: Recommended Item issue: 1.5h
+	MPV-5637: 1h (support)
+	MPV-5639: Run TCs: 2.5h
+		- Session 20 May:
+			- Set up test data
+			- Add Requisition headers
+			- Check behavior:
+				- Non-stock:
+					- Have preferred Supplier/Non preferred Supplier: Checked on MPSA/Test/Test1
+
+20/05:
+	
+	Offline 1/2 day
+	
+	MPV-5639: Run TCs: 2.5h
+		- Session 21 May:
+			- Stock:
+				- Single Warehouse:
+				- Multi Warehouse:
+					- Preferred Supplier on Catalogue only: Default Supplier based on selected Parts Catalogue should take into account the Req's Operational View
+					- Clearing Warehouse should also clear the Supplier
+					- ??No populate: Tax when defaulting from selected Parts Catalogue (defaulting from StockItem is working)
+					- Always default to Catalogue regardless the stock item has preferred suppliers
+			- Related fields:
+				- Supplier
+				- Unit of Purchase
+				- Tax
+				- Unit price
+				- Currency
+					
+	Issue:
+		- Message on Commit Issue: Serialized?
+		
+21/05:
+	Off: 4h
+	
+	MPV-5639: 3h
+	Support: 0.5h
+	MPV-5704: 0.5h	
+
+22/05:
+	Training: 1h (x)
+	
+	MPV-5639: 1h (MPV-4332 for reference)
+	
+	MPV-5541: 1h
+	
+	MPV-5591: any links to other cases?
+	
+	Migration: 5h
+		- 20 forecast WO is created
+		
+	Flour database has some interesting stuff though
+
+
+25/05:
+
+	Daily: 0.25h
+	
+	MPV-5702: 2h
+	
+	MPV-5541: 3.5h
+	
+	MPV-5637: 
+	
+	MPV-5714: (support: 1.5h+)
+		MPV-4394: (DRD-4479)
+			> MPV-4484: (DRD-4306)
+			> MPV-4462
+		
+	Issue: OrderID problem - TBA
+	
+26/05:
+
+	Daily: 0.25h
+	
+	MPV-5541: 0.5h
+	
+	MPV-5637: 4h
+	
+	MPV-5639: 1.5h
+		Defaulting Unit of Purchase: To be further investigated and raised as new JIRA
+			- No Warehouse, No Supplier: Default to StockItem's UnitOfIssue: 1st StockItem
+			- Only Warehouse, No Supplier: Default to StockItem's UnitOfIssue
+			- Selected Warehouse, Defaulted Supplier: Default to StockItem's SupplierItem's UnitOfMeasure
+			- Only Supplier, No Warehouse: Default to Catalogue's SupplierItem's UnitOfMeasure
+	
+	MPV-5717: 1h
+	- Stores Requisition: 
+		- Bin check (Single WH) is loading Warehouse with up direction
+		- Stores Requisition Line: defaulting warehouse
+	- What is included in lookups?
+		- MPV-5353: If there are two actives StockItem in the current branch, as present, System gets default first warehouse which is added on the stock part
+		- MPV-4809: 1st StockItem
+27/05:
+
+	Daily: 0.25h
+	MPV-5717:1h
+		- Warehouse lookup:
+			- No part selected: Up
+			- Has part selected: Branch
+		- RequisitionLinePageSettings: Line 357 > Get Warehouse
+		- RequisitionLineEdit.js > Set Warehouse
+		
+		- Rules > PageSettings > .js
+		
+	MPV-5637: 3h
+	
+	MPV-5718: To be UPDATEd
+		- No mention about the Default Order Price setting
+	Investigate bua lua xua: 
+	MPV-5639: 3h
+		- Clearing Supplier:
+			- Should it clear all related fields
+			
+		- When the user selects a new parts catalogue, it should clear an invalid supplier. It should also set a default supplier, to the first preferred supplierItem in the branch.
+			- Setting that supplier should then result in the update of the SupplierItem related fields.
+			
+		- The same apply when changing warehouse should clear an invalid supplier (there is no preferred supplier found). Clearing supplier should 
+			- If there is a preferred supplier with a same name found on Catalogue then default related fields from this supplierItem.
+		
+		- Outstanding issues:
+			+ Defaulting/Clearing Unit of Purchase is not consistant. Please check this again.
+				* i.e When clearing both Supplier and Warehouse there is chance that the Unit of Purchase is not cleared.
+			+ Apply to both ReqLine + OrderLine: Clearing supplier only clear Tax/Unit of Purchase leaving the Unit Price intact.
+			- 
+	- Investigate bua lua xua: 2h
+		- Default warehouse on Order Line: MPV-5538
+		- Add Order Line from Order: The Supplier shouldn't be changed: MPV-5550
+		- MERGE: ADV-STD: Requisition Line: MPV-5353
+		- Logic in defaulting the Delivery Warehouse for an OrderLine needs to be improved: MPV-5067
+		- Advanced - Source warehouse not correctly identified for a stocked item in multiple warehouses: MPV-1467
+		- Requisition line - defaulting to the wrong supplier: MPV-5048
+		- Purchase Requisition Line: Part lookup does not see the Stock Catalogue without Stock Item
+	
+28/05:
+	
+	Daily: 0.25h
+	MPV-5637: 6h
+		- When Default Order Price set to Supplier Item there is actually no variance
+		- Cannot lookup Draft Order for a Replenishment Requisition (Assign to Draft Order action)
+		
+	MPV-5702:
+	
+	Support: 1h
+	
+	MPV-????
+	
+29/05:
+
+	Daily:
+	MPV-5674: 1.5h (Closed)
+		- While checking this case it is found that the Bin's Value on Hand is not updated properly although there is InventoryTransaction (MPV-5665)
+		- 
+	MPV-5729: 1.5h (Closed)
+	Support: 1.5
+	MPV-5637: 2h
+	MPV-5702:
+	MPV-5665: 0.5h
+	
+	Issue: 
+		- Part screen: Clicking on fields clears the Warehouse (defaulted and disabled)
+		- Randomly seeing an issue where clicking on screen clear out the supplier
+	... 
+	
+01/06:
+
+	Daily: 0.25h
+	MPV-5665: 0.5 (Reproduce, support)
+	MPV-5702: 6h
+	Support: 1h
+	
+02/06:
+
+	MPV-5702: 2h
+	MPV-5704: 
+	
+	MPV-5637
+	Issue: OrderID problem - TBA: MPV-5755: 1h
+	
+	MPV-5754: Lisa added (looks like a missed bug)
+	
+	Checking Supplier Item: 2h
+			Select * from PartsCatalogue where PartsCatalogueID in (
+			Select PartsCatalogueID from SupplierItem
+			Group by StockItemID, PartsCatalogueID
+			having count(StockItemID) > 2)
+		=> Multi SupplierItem for a Same Stock Item usually on the same OperationalView
+	
+03/06:
+
+	Daily: 0.25h
+	Issue with Work Order on R3.14.10: 1h
+		- On Issue?
+		- Need more details
+		
+		> From email trail:
+			- Partial Issue do not automatically change the status of the requisition header
+			- Lisa has raised MPV-5671 on 29 Apr
+			and that value must impact the validation when attempting to close a work order with no outstanding requisitions.
+			- To check if the issue has been fixed on R3.15.1: 
+	
+	Test Design:
+		- 
+			
+	Unit of Purchase on Requisition Line:
+		- Expected: 
+	
+	Meeting: 2h
+	
+	MPV-5702: 1.5h
+	
+04/06:
+
+	- Daily: 0.25h
+	- Automation meet: to send meeting minute 0.5h
+	- HD: 2h
+		- Clients using which versions?
+			- Account
+		- Which module introduced the most BUG?
+			- Can I have a list of the BUG for R3.14 and R3.15? (Lv2) [exported excel file] 2k
+	
+	Issues:	2h
+		- Cannot submit requisition line 1 for requisition 'R-000-088'. Source warehouse is not allowed for a purchase requisition. (Mismatching between Req' OperationalView - Stockitem) [TBA]
+		- Updating Core Return is not update Invoice Line: [TBA]
+			Core Value
+				Default to the SupplierItem.CoreCost
+				where SupplierItem.PartsCatalogueID = OrderLine.PartsCatalogueID
+				and SupplierItem.StockItemID = OrderLine.StockItemID
+				and SupplierItem.SupplierID = Selected SupplierID
+		- Move to Draft a Completed Order
+	
+	- MPV-5534: 2h (Support)
+		- 
+	- MPV-5754: 1h
+		- if (receiptLine.QtyAccepted + orderLine.QtyAccepted < 0)
+	
+05/06
+	
+	Daily
+	MPV-5698: 1h
+		- FMECA should be a licence module:
+			1- Appears in Licensed Modules list on Licence Page
+				- Import Licence key with/without FMECA module
+				
+			2- No FMECEA function available on Operational Asset
+				- Menus:
+					- Utilities > FMECA
+					- Operational Asset > Functional Failure
+					- Operational Asset > Operational Asset Failure Mode
+				- Grids:
+					- Operational Asset > FMECA tab
+				- Screen:
+					- Work Order:
+						- Functional Failure
+						- Failure Mode
+					- Work Request:
+						- Functional Failure
+				- Settings
+				
+			3- Mainpac Licence Administration Site
+				- Like Graphical Scheduler
+				- Deploy to ITEASY (Backup!)
+				
+	MPV-5699: 1h
+		- Mainpac Connect should be a licence module
+			1- Appears in Licensed Modules list on Licence Page Settings
+			2- Need to update Mainpac Connect core to include or exclude Mainpac Connect based on licence. See other examples Graphical Scheduler.
+			
+08/06: 1.45 + 1 + 1 + 1
+	
+	Daily: 0.5h
+	
+		Meeting: 1.45h
+	
+		MPV-5698: 1h
+	
+		MPV-5754: 1h
+	
+	Approval:
+		MPV-1762
+		MPV-1912
+		MPV-1913
+	
+	
+09/06
+
+	Daily
+	Check force delegate
+	MPV-5754: 3.5h (Closed)
+	MPV-5623: 1h
+
+	MPV-5637: 
+		- Issue: Resubmit for Approval: Only Max approver can see the approval pending requisition
+		
+	Requisition: 2.5h
+		- Type = Purchase when there is no StockItemID
+			- Select Catalogue which is not stocked
+			- 
+		- Part lookup when Type = Replenishment does not include the Catalogue that do not stocked
+		- No need for Source Warehouse on Purchase: YES, only DestinationWarehouseID available
+		
+	Issue: Cannot submit requisition line 1 for requisition 'R-000-062'. Source warehouse is not allowed for a purchase requisition. TBA
+
+10/06
+
+	Daily: 0.5h
+	
+	MPV-5623: 2.5h (Closed)
+		Before (WESEQ1)
+			- Stop at Warning: 5'48s
+			- Process: 
+		After (WESEQ1)
+			43: 1'
+			380: 3'15s
+			
+			Wed, 10 Jun 2015 09:03:50 GMT
+			Wed, 10 Jun 2015 09:00:43 GMT
+			Wed, 10 Jun 2015 09:04:33 GMT
+			
+				
+			Wed, 10 Jun 2015 10:08:23 GMT
+			Wed, 10 Jun 2015 10:10:45 GMT
+			
+	Meeting: 2h
+	
+	Issue: The report server installation is not initialized (Solved)			
+		=> Delete Encrypted Content. Restart Service.
+	
+	MPV-5665: 1.5h
+		- Check normal invoice with approval (variance)
+			- Bin value is updated correctly
+			- Invoice goes through approval process as expected
+		- Check ad-hoc invoice with/without order line
+			- cost only
+			- service
+	
+	MPV-5699: 0.5h
+		1- Appears in Licensed Modules list on Licence Page Settings
+			- Licence with YES/NO checked the Connect tool
+			
+		2- Applying:
+			1. Login: Check if licenced? (selected)
+				- Yes: Allow login
+				- No: Reject. Messaage to inform: 
+					- "You don't have permission to import data"
+					- "You are not licensed to use Mainpac Connect" (choosed)
+				- Note: need restart service after updaing licence
+				- Enterprise Library: caching
+			2. After login (voted down)
+				- 
+		3- 	Steps:
+			- Commit code (2) TRUNK 
+			- Commit code (1) to SVN https://58.96.135.57:8443/svn/MainpacLicenceManager/trunk)
+			- Local:
+				- Hosting Licence tool (http://licence.mainpac.com.au/LicenceManager : source code > host to local)
+			- Hosting
+				- How to??
+				
+15/06:
+
+	Daily: 0.5h
+	Update 'excel': 1h
+	MPV-5749: Support: 1.5h
+	MPV-5665: 
+	MPV-5637: 2h
+		- Requisition with item under supplier agreement: Input quantity will enable the Unit Price field (MPV-5630 is affected)
+		- If the Re-submitter is also the Last Approver will cause the Requisition Line to be unable to be approved
+		- Check with old version: Require Amendment
+		
+		Automation: time?
+		- Modules
+			- Coverage
+				- Status
+					- Issue? Action?
+					- Time to complete?
+	
+	MPV-5699: 1h
+	
+	MPV-5717:
+		- Change Supplier: Meeting to discuss - Break old behavior
+		- 
+		
+16/06
+	
+	Daily: 0.5
+	
+	Dev cut off 18 Jun?
+	
+	MPV-5637: 1.5h
+	- Checking with rev 12140: Approve an Resubmit by a same user
+		- Same issue on rev 12175
+	
+	On the discussing issue:
+		- Dev cannot write?
+		- Dev have too much job too do already
+		- ...
+		
+	MPV-5665: 3h
+		- Check normal invoice with approval (variance)
+			- Stock part: 
+				- Bin value, quantity is updated correctly
+				- Invoice variance on the part record's cost tab
+			- Invoice goes through approval process as expected
+			- Non-stock part: Transaction is created
+		- Check ad-hoc invoice with/without order line
+			- cost only
+			- service
+			
+	Issue: 
+		- Add-hoc OrderLine. Unit Price field is mandatory but is not validated. TBA
+		- Approval Route set at Force Delegate, Requisition is submitted, Approval route is then changed to Self Approval, then Resubmitted > Problem
+	
+	MPV-5699: 
+		- Licence Administration site
+		
+	Support: 1.5h
+		
+	Note: On reopen, extend cases
+		Please work with team to provide reason of re-open, and extension effort cases. For example:
+		 1. The complexity of business or coding
+		 2. Mis-understanding
+		 3. Introduce another bug after resolved
+		 4. Break Code standard
+		 5. Review failure
+
+	Added: MPV-5787: 0.5h
+		- Buyer Work List: Cannot use 'Assign to Draft Order' action with Replenishment Requisition
+	
+	Does Buyer member do the Receipt or the Requestor?
+	
+17/06:
+
+	Daily: 0.5h
+	
+	MPV-5699: 0.5 + 2.5 + 2 = 5h
+		Check license when program is starting up.
+			- Output is message:
+				"You are not licensed to use Mainpac Connect."
+				> Open form database connection error.
+		
+		Click Change Database Connection:
+			- Open form Database connection. Click button Set Connection 
+				- Check license before set new connection, the result is message: "You are not licensed to use Mainpac Connect."
+		
+		When user Login
+			Check License before authenticated user. The result is message: "You are not licensed to use Mainpac Connect."
+			If user try using MP Connect without license, before execute importing data, a message will be appear 'Invalid Database Connection Information...'
+			
+		
+		Building latest EAM instance
+			- Deploy: done
+		Deploy Mainpac Connect (lastest) with two connection: done
+			- Deploy another 2 separated instances - one with and one without licence: done
+	
+		Issue: 
+			- Switching user/connection is not smooth (MPV-5557)
+			- Added MPV-5790
+			
+	Meeting RCA: 1h		
+	
+18/06: 4 + 0.5 + 0.5 + 0.5 = 5.5
+
+	Daily: 0.5
+	
+		MPV-5676: 2.5 + 0.5 + 1 = 4h
+	
+		MPV-5717: 0.5 (support)
+			- Currency, Unit Price, Tax behavior: MPV-1576
+		
+		MPV-5744: 0.5h
+	
+		MPV-5535: 0.5h (Added MPV-5792)
+	
+19/06: 1 + 4 = 5
+
+	Daily: 0.5h
+	
+	Automation (reply mail):
+		Changes are required for the automation
+		Automation is lagging behind quite an amount of time
+			HOT cases in road map
+		
+		- Make changes to process (Moral)
+		- 
+	Update Tracking file 1.5h
+	
+	MPV-5676: 1h
+	
+	MPV-5639: 4h
+		- Supplier Item Name and Currency is enabled when inputting Quantity and Edit screen
+		Raise a requisition for that part
+		The supplier correctly defaults to the part's preferred supplier.
+		Default values are correctly set (and disabled) for values retrieved from the SupplierItem record:
+			Supplier Item Name
+			Unit of Purchase
+			Tax
+			Currency
+		Now change the supplier to another supplier (which has not been associated with the part at all, and so there is no supplierItem record)
+		Expected result:
+			1. The following fields are cleared and enabled
+				Supplier Item Name
+				Unit of Purchase
+				Unit Price
+			2. The 'Currency' field is enabled, and defaults to the supplier's currency.
+			3. The Tax field is enabled, and defaults to the suppliers tax code.	
+			
+			
+22/06: 0.5 + 1 + 1 + 0.5 + 1 + 1 + 2 = 7
+
+	Daily: 0.5h
+	
+	Update Tracking file
+	- # of Reopened
+	- Status
+	-  Color:
+		- Reopen >= 1 Yellow
+		- Reopen >=3 Red
+		- Status changed to Closed: Black
+		- Keep it red
+	
+	MPV-5794: 1h
+		- 
+	
+		Replying email: 1h
+	
+	MPV-5777: 
+		- Clear
+			- Warehouse
+			- Supplier
+		- Edit
+			Req
+		- 
+		
+		Meeting: 1h
+
+		Excel file: 1
+	
+	-MPV-5676: 1h-
+	
+	MPV-5541: 2.5
+	
+	The user who submitted the Order can see the Order Line on approval pending grid
+
+	Support 1h
+	
+	MPV-5782: Order Work List: The 'Source Warehouse' cannot be blank.?? to be addressed?
+	MPV-5637: Turning off the setting?
+	
+23/06: 0.5 + 0.5 + 2.5 + 1 + 2 + 1 = 7.5
+
+	Daily: 0.5h
+	Excel: 30'
+	
+	MPV-5777: 2.5h
+		
+		- RequisitionLine
+			- Stores: break MPV-1744, not get default Part's Unit Of Issue when the stock item have Preferred supplier item. 
+						At current, it get the Unit Of Purchase on Preferred Supplier item.
+				• Stock Item: NO Preferred Supplier Item ==> get Part's Unit Of Issue.
+		
+		- Order Line
+			- Ad-hoc Order Line: Unit of Purchase is not populate correctly (Clear WH/Select another WH)
+			- Warehouse is not default from 'Default warehouse' setting
+			- Supplier field: Part Catalogue is not preferred but Supplier name duplicated***
+			
+			
+	MPV-5637:
+		- Restrict Requisition Variance setting cause the generated Order has Unit Price = 0
+		
+	MPV-5794: 2h
+		- Issue: Draft Order: Order line status is not refreshed on breadcrum after closing (TBA)
+	
+	MPV-5630: To be re-verified when MPV-5639 is resolved.
+		
+	MPV-5795: 1h
+	
+	MPV-5676: 1h
+		
+
+24/06: 0.5 + 1.5 + 2.5 + 1 + 1 = 6.5 + 1 = 7.5
+
+	Daily: 0.5h
+	
+	MPV-5794: 1.5h
+		- Verifying raising event
+		
+	MPV-5676: 1h
+		- Demo
+		
+	MPV-5777: 1h (support)
+		- ??
+	
+	Issue: 
+		- Click inline but do not select then select in Look up dialog does not return value to field. TBA
+		- Ad-hoc order does not have buyer group TBI
+	
+	
+	MPV-5637: 2.5h?
+	
+	MPV-5755: 1h
+	
+25/06: 0.5 + 2 + 1 + 1 + 1 = 5 + 2 = 7.5h
+
+	- Daily: 0.5
+	
+	- MPV-5755: 2h
+	
+	Excel?? 1h support
+	
+	- MPV-5630: 45'
+		- 
+		
+	MPV-5639: 1h
+		- 
+		
+	MPV-5753: 2h
+		- Generate return: Total   16.73s
+			- Dialog appears: 5.12s
+			- Process: 11.61s
+		- Edit Return:
+			- Inline: 5.14s
+			- Popup: 5.18s
+		- Commit Return:
+			- Take 1: 14.65 (24.59 after refresh)
+			- Take 2: 11.91 (19.83 after refresh)
+			- Take 3: 7.36	(18.69 after refresh)
+			- Take 4: 7.36	(18.58 after refresh) PM212
+			
+	MPV-5676:
+		-           else
+                                {
+                                    if (MPText.AreEqual(this.ScreenName, Mainpac.Server.MetaData.Screen.WorkOrderRequest) && MPText.AreEqual(rulesAction.ToString(), RulesCustomAction.WorkOrderRequestLinkToWorkOrder))
+                                    {
+                                        attributes.Add("WorkRequestOPViewID", PageEntity.OperationalViewId);
+                                    }
+                                    action = JavaScript.BuildShowMainBatchDialog(this.ScreenName, rulesAction.ToString(), new[] { MPConvert.ToIntDefault(RecordId, -1) }, true, attributes);
+                                }
+                            }
+							
+26/06: 0.5 + 3 + 2 + 2 + 2 = 8.5
+
+	Daily: 0.5
+	
+	MPV-5753: 3h
+		- Generate return: 13.34s || 14.26s || 14.13s
+			- Dialog appears: 	4.5s  || 4.44s || 4.55s  || 4.75s || 
+			- Process: 			5.91s || 9.94s || 10.78s || 7.58s || 
+		- Edit Return:
+			- Inline: 20.49 || 9.6 || 3.84 || 3.75 || 3.79 || 
+			- Popup: 1.37 + 3.75 = 5.12 || 1.17 + 3.58 || 
+		- Commit Return:
+			- Take 1: 4.81 (14.53 after refresh)
+			- Take 2: 6.76 (12.79 after refresh)
+			- Take 3: 	(43.83 after refresh)
+			- Take 4: 5.79 (12.62 after refresh)
+			- Take 5: (16.28 after refresh)
+		
+	Support: 1h
+	
+	MPV-5630: 2h
+		- Add, Edit Draft, Edit Authorised, Recommended, 
+		
+	Issue: Ad-hoc Order does not have DestinationWarehouseID. TBA. 0.5h
+	
+	MPV-5639: 
+		- Agreement?
+		
+	Verify review package R3.15.1: 2h
+		
+		
+29/06:
+
+	Daily: 45'
+	
+	Excel: 1h
+	
+	Regression: 4h
+		- Required By Date: 
+			- Calculation: 
+		- 
+	
+	Upgrading Licence Manager Site package: 3.5h
+	
+	
+	Issue: Cannot submit requisition line 1 for requisition 'M212-107780'. Source warehouse is not allowed for a purchase requisition.
+		- Catalogue MHL
+		- Warehouse PM212
+		- Supplier MAC
+		
+30/06:
+
+	Daily: 0.5h
+	
+	Automation status:
+	- Finish running legacy code: 
+		- Result: 
+		
+	- Current trend:
+	
+	- MPV-5810: 2h
+	
+	- Issue:
+		- Click Save after delete records returns "Object refer...." message. TBA
+		- Receipt's Part Description does not default from Order. TBI.
+			- Order Description on Order Pending grid show a value different from Order Line screen
+		- Invoice to Credit field is not enabled after adding an negative invoice line
+		
+		- To check ad-hoc issue create a new requisition?
+
+01/07:
+
+	Regression
+	Package
+	
+02/07:
+	
+	Regression (flows)
+		- Is Return function working?
+		
+		- 
+		
+		- Requisitor can Edit the Authorised Requisition Line?
+			- Purchase
+			- Stores
+			- Replenishment
+			
+			Places:
+				- Buyer Work List
+				- Requisition
+				- Requisition Line
+				- Storekeeper List (Issue - Stores)
+				- Work Order Part (Purchase, Stores)
+				- Part > View > Requisition
+			
+		- Can add Stores Requisition without Tax Code. 12162.
+			- Changes has been made. Stores requisition line now have Tax Code (under the table). While no impact has been confirmed this is a new introduced behavior.
+			- Will this affect the calculation for Cost on Work Order?
+			- Also the Cost of Issue?
+			- Appears to only affect ad-hoc
+			
+		- Storekeeper group on Stores Requisition Line?
+		
+		- Unit Price for Stock Part on Work order Parts grid? = AverageCost
+			- Unit Price for Non-Stock Part on Work order Parts grid?
+	
+03/07:
+
+	Daily:
+	
+	Issue:
+		- Requisition > Requisition Line Items grid: checkbox appear after. TBI.
+		- 'You don't have permission to select Work Order' message appear when adding Transaction. User profile issue. TBA.
+		- 'Required By Date' on Requisition Line screen: Change value va Save duoc mac du field dang disabled. TBA.
+		- view Asset Events List can change datetime picker. TBI.
+		
+	MPV-5817: 1h
+	
+	MPV-5676, MPV-5637 is reopened.
+	
+	CRM: 
+	- MPV-5637
+	- MPV-5702
+	- 
+	
+06/07:
+
+	Daily:
+	
+	Regression:
+		- Unit on Test Practice Link?
+		- Expedite field on Order?
+		
+07/07:
+
+	Daily: 0.5h
+	
+	Regression: 3.5h
+	- Expedite checking: MPV-2325; MPV-186
+		- Emails only get sent when the Expedite date is changed
+			- Working. Need more investigate.
+		- Exclude Invoiced: TBI.
+		
+	DRD-5757: 3h
+		- Development: 5
+		- Merge: 2
+		- Package: 1
+		
+	DRD-5716: Add ability to disable defaulting of values on Follow up/Child WO: 1h
+	
+08/07:
+
+	Daily: 0.5h
+	
+	MPV-5762: 5h
+
+		
+	Research: Credit Note (1.5h)
+		- DRD-4894: CLONE -Macmahon: Purchasing - Invoices - Issues
+		- Credit Note must reference previous invoice to credit (except for additional cost credit line): Force 'Invoice to Credit'?
+		- DRD-1595: Review macmahon specific config/screen/rule modifications
+		- MPMN-1694: Re-design
+		- DRD-3865: Credit Note Prefix default for negative invoices
+		- MPV-2468: Spec: Configuration Improvements
+		
+	- Expedite Date: (0.5h)
+		- Rev-12055: No
+		- Rev-12040: Yes
+		- 
+	- MPV-5233: Validator not working for the 'Returns' grid dialogue.
+		- Regular Expression
+		- Validator
+		- Screen Manager
+		
+	- Regression: 1h
+	
+	- Migration:
+		- Thursday: 6pm start tool
+		- Friday: 7h-7h30 start verifying
+		
+09/07:
+
+	Daily: 0.5h
+	
+	MPV-5762: Investigate issue on Invoice (0.5h)
+		- The Order Date is 08 Jul
+		- This receipt is received on 06 Jul
+		- Invoice is generated on 09 Jul: when generating invoice the process try to update the receipt with ReceiptLine.InvoiceID = Invoice.InvoiceID. 
+			This process also have a validation for ReceiptDate vs OrderDate
+			
+	Hospira issues:
+		- DRD-5738:
+		- DRD-5749:
+		- DRD-5705: 1h
+			- DRD-5765 (linked for MPV-5705)
+		
+	Regression:
+		- 
+	
+	MPV-5830: 3h
+		- Buyer Group: 
+		- Destination Warehouse:
+			- Populated when generating Purchase Requisition.
+			- Blank when generating Replenishment Requisition.
+		- Expedition Date:
+		
+	
+10/07:
+
+	Daily: 0.5h
+	
+	Requisition:
+		- Purchase
+		- Stores
+		- Replenishment
+		
+		- Default details from Supplier Item from Parts Catalogue
+		
+	
+	Hospira: 1h
+		1- DRD-5750: Tham to work
+		2- DRD-5767: (DRD-5749) (Hung Mai) Merged MPV-5831 to 11.3.15.
+		3- DRD-5765: In-Progress (Qui Nguyen)
+		4- DRD-5756: To work. Document attachment(s) printing.
+		5- MPV-5834: Resolved. Test on Trunk and Merge 11.3.15 (Hung Mai)
+		6- DRD-5738: Will have new ticket - DRD-5768. Test on Trunk and Merge 11.3.15. 
+	
+	8- MPV-5835: In-Progress.
+	9- Work Order Parts: Requisition Line's supplier defaulting (MPV-4959) (SVN#11983 can replicate this)
+	
+	MPV-5834: 1h
+		- Outstanding: QtyAcceptedUncommitted > 0?
+	
+	MPV-4959: Added MPV-5840. 2h.
+	
+	MPV-5837: 1.5h
+		
+11/07:
+
+	MPV-5835:
+	- 	Profile Item = FULL
+		AND
+		Belong to Requisition Group
+	- Issue: User who does not have full permission but belong to the Requisition Group can Edit Requisition
+	- Enable Add/Delete button on Requisition Line grid 
+	
+	MPV-5840: 2h
+		- 
+		
+	MPV-5847: 
+		- Single Operational View
+		
+	- TBA: Stocktake Work List: After selecting a Warehouse the Warehouse lookup filter data based on the selected Warehouse's Operational View. Same apply to Receipt/Invoice.
+	
+13/07:
+
+	Daily:
+
+	Test case:
+		- MPV-5534
+		- MPV-5659
+		- MPV-5675
+
+	Duplicate Date column: 1h
+
+	Extra Security: New licence always has Extra security enabled?? TBI
+	
+	MPV-5832: 1.5h
+	
+	MPV-5828: 2h
+	
+	DRD-5757:
+		- Assumption for Automation is start along with manual
+		- Scenarios:
+			- Check new page action on Work Order screens
+			- Check new batch action on Work order screens
+			- Verify Email dialog box layout elements are available
+			- Check profile items are added: Add/Delete permission
+			- Check Template email lookup function
+			- Check Sending email function
+			
+	Issue: Add Delete button on Parts grid in Parts Catalogue screen? TBI.
+	
+14/07:
+
+	Daily: 0.5h
+	
+	DRD-5738: 3h
+		- Issue in displaying time format:
+		Created Date column:
+			14 Jul 2015 1:58:17 PM => 14 Jul 2015 6:58:17 AM	: 1:58:17 PM => 6:58:17 AM		: -7
+			10 Jul 2015 6:07:11 PM => 10 Jul 2015 11:07:11 AM	: 6:07:11 PM => 11:07:11 AM		: -7
+
+		- Display correctly as per set setting
+			- 
+		- Display correctly after exported
+			- Excel
+			- PDF
+			- 
+	
+	Estimation R3.15.2:
+		- MPV-5554: 2.5h
+			- Order screen action:
+				- Submit
+				- Release
+				- Complete
+			- Buyer Work List action:
+				- Submit
+				- Release
+				- Complete
+	
+	MPV-5813: Stock Part creates Purchase Requisition Line (WorkOrderParts). TBI. 0.5h
+		- http://jira.mainpac.com.au:8080/browse/DRD-1955
+		- http://jira.mainpac.com.au:8080/browse/MPV-3380
+
+	Issue: Can create Condition record with blank Date (input 24:00 into Time field). TBA.
+	
+	
+15/07:
+
+	Daily: 0.5h
+	
+	MPV-5813: 2h
+		- Check old behavior: R3.12:
+			- Purchase if default warehouse is MPSA
+			- Stores if default warehouse is Test1, Test2
+		- Reference:
+			- http://jira.mainpac.com.au:8080/browse/MPV-5235
+			- 
+		
+	DRD-5765: 1.5h
+	
+	Support: 1h
+	
+	Test case template: 1h
+		- Check old template from FCS
+		- Merged some elements to Mainpac test case template file
+		
+	Estimation R3.15.2:
+		- MPV-5821: 4h
+			- Cannot delete Operational Asset: 1h
+				- Check profile items
+				- Create additional reference
+				- Ensure referenced Asset cannot be deleted
+			- Object reference not set to an instance of an object when edit Operational Asset status history: testing time est: 0.5h
+			- Operational Asset status history is updated wrongly to last Operational Asset: 0.5h
+	
+	MPV-5842: 
+	
+	PA Mark
