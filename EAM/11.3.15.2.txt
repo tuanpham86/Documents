@@ -1130,14 +1130,14 @@ Please get more details from attached test case file [^Mainpac Test case for MPV
 			Add JIRA: 1h (0.5h)
 				- MPV-5992
 		
-04/09: 3 + 1 + 2 = 6
+04/09: 3 + 1.5 + 3 = 7.5
 
 	MPV-5980: 2.5 + 0.5 = 3
 		9.30 - 15.00
 		
-	Support: 1h
+	Support: 1.5h
 	
-	MPV-5972: 2h left
+	MPV-5972: 3h
 		- Work Order work flow
 	
 		
@@ -1146,6 +1146,85 @@ Please get more details from attached test case file [^Mainpac Test case for MPV
 		- Invoice Line: Selecting an Order line then clear the selection result in the Quantity Invoiced = 0. TBA.
 		- Invoice Line: Validation for Cost Distribution is not fired. TBI.
 		- Numeric format .0000###### OR .000####### seems does not work. TBI. MPV-5534.
+		- Setting Work Order to Complete while the Work Order is in Forecast status doesn't populate Completed date. TBA.
+			- Need to refresh the screen manually to trigger this update.
+		
+
+
+	MPV-5953
+		- Purchase: <0 && != 0
+			- Message
+		- Replenishment: > 0  && != 0
+			- Message
+
+
+
+07/09: 4 + 1.5 + 0.5 + 0.5 + 0.5 = 7
+	
+		MS Project Tool
+		DRD-5675: 1.5
+			Requisition:
+					- Requisition work list
+						- Submit, Assign to Me, Approve, Require Amendment, Reject, Resubmit, Cancel, Expedite
+					- Requisition search screen
+					- Requisition Line search screen
+			Finnacial Asset Management
+			Operational Asset
+				- Search screen (Update field)
+				- Structure screen 
+			Work Order
+				- Work Order search screen batch process
+			Purchasing
+				- Order search screen
+				- Order Line search screen
+				- Receipt Work List
+				- Invoice Work List
+				- Invoice Line search screen
+			Inventory
+				- Parts Catalogue search screen
+				- Part search screen
+				- Warehouse search
+				- Bin search
+				- Issue/Return Work List
+		
+		DRD-5824: 0.5h
+		DRD-5817: 0.5h
+		Support: 0.5h
+	MPV-5818:
+		- 
+
+		MPV-5975: 4h
+			- Discussion
+			- Test case?
+
+08/09:
+	
+	MPV-5950: 2.5h
+		- S 1.30 - 
+	
+	DRD-5842: 2h
+				Sending to TMA email	Sending to Mainpac email	
+		R3.14				Failed					Passed
+		R3.15.1				Failed					Passed
+		R3.15.2				Failed					Failed
+	
+	Requisition Line: 1h
+		- Qty: Cannot over 18 digits ('Quantity Requested' must be a number less than 1x10^17.)
+			• Add: Value can be inputted (http://jira.mainpac.com.au:8080/browse/MPV-1694 ; http://jira.mainpac.com.au:8080/browse/MPV-1694)
+			• Edit: Show valation message
+	Order Line: 
+		http://jira.mainpac.com.au:8080/browse/MPV-3441
+	
+	MPV-58
+	
+	Validator: Expression: 0.5h
+
+
+
+
+
+
+
 
 
 
@@ -1160,7 +1239,6 @@ Please get more details from attached test case file [^Mainpac Test case for MPV
 
 
 	
-		
 	FitNesse
 	
 	

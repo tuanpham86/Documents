@@ -1,17 +1,14 @@
-	Exploratory Testing
+Exploratory Testing
 	
 		Definition
 			- The term was originally coined by - 199x
-			- 
 			
 		When to apply Exploratory Testing
 			
 		Applying Exploratory Testing in Agile project
 			
-			
 		Conclusion:
 			Testing somehow became about processes, approaches and terminology rather than focusing on creating an awesome product and doing great creative testing.
 			
-			
-	Certificates  don’t prove that a tester knows what they are doing
+	Certificates don’t prove that a tester knows what they are doing
 		- actively practices and seeks to become better at testing
